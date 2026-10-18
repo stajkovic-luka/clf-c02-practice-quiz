@@ -1,4 +1,5 @@
 import { DOMAINS, DOMAIN_IDS } from '../domains';
+import { SIMULATION_PASS_SCORE } from '../utils/quiz';
 
 /** Poruka prema ostvarenom procentu. */
 function scoreMessage(pct) {
@@ -12,11 +13,15 @@ function scoreMessage(pct) {
  * Završni ekran: ukupan skor, prosek po oblastima i pregled pogrešnih
  * odgovora sa objašnjenjima, uz opcije za ponovno pokretanje.
  */
-export default function ResultsScreen({ results, mode, onRestart, onHome }) {
+export default function ResultsScreen({ report, session, onRestart, onHome }) {
+  const { results, elapsedSeconds, timedOut, scaledScore } = report;
   const total = results.length;
   const correct = results.filter((r) => r.wasCorrect).length;
-  const pct = Math.round((correct / total) * 100);
-  const review = results.filter((r) => !r.wasCorrect || r.marked);
+  const pct = total ? Math.round((correct / total) * 100) : 0;
+  const simulation = session.type === 'simulation';
+  const passed = simulation && scaledScore >= SIMULATION_PASS_SCORE;
+  const review = simulation ? results : results.filter((r) => !r.wasCorrect || r.revealed);
+  const duration = `${String(Math.floor(elapsedSeconds / 60)).padStart(2, '0')}:${String(elapsedSeconds % 60).padStart(2, '0')}`;
 
   // Statistika po oblastima — samo oblasti koje su bile u ovom kvizu.
   const byDomain = DOMAIN_IDS.map((id) => {
@@ -28,10 +33,9 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
     };
   }).filter((d) => d.total > 0);
 
-  const modeLabel =
-    mode === 'all'
-      ? 'Kompletan kviz'
-      : `${DOMAINS[mode].code} · ${DOMAINS[mode].name}`;
+  const modeLabel = simulation
+    ? 'Simulation Mode · Exam Report'
+    : session.domain === 'all' ? 'Practice Mode · cela baza' : `Practice Mode · ${DOMAINS[session.domain].code} · ${DOMAINS[session.domain].name}`;
 
   return (
     <main className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:pt-14">
@@ -39,30 +43,46 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
       <p className="font-mono text-xs uppercase tracking-widest text-neutral-500">{modeLabel}</p>
 
       <section className="mt-3 rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6 sm:p-8">
-        <div className="flex flex-wrap items-end gap-x-4 gap-y-1">
-          <span className="text-5xl font-bold tracking-tight text-neutral-50">{pct}%</span>
-          <span className="pb-1 font-mono text-sm text-neutral-400">
-            {correct}/{total} tačnih odgovora
-          </span>
-        </div>
-        <div className="mt-4 h-2 overflow-hidden rounded-full bg-neutral-800">
-          <div
-            className="h-full rounded-full bg-gradient-to-r from-orange-500 to-amber-400 transition-all duration-500"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
-        <p className="mt-4 text-sm leading-relaxed text-neutral-300">{scoreMessage(pct)}</p>
+        {simulation ? (
+          <div>
+            <p className="text-sm font-semibold text-neutral-300">Tvoj rezultat:</p>
+            <p className="mt-1 text-5xl font-bold tracking-tight text-neutral-50 sm:text-6xl">
+              {scaledScore} <span className="text-2xl text-neutral-400 sm:text-3xl">/ 1000</span>
+            </p>
+            <span className={`mt-5 inline-flex rounded-lg border px-5 py-2 text-2xl font-black tracking-widest ${passed ? 'border-emerald-400 bg-emerald-500/15 text-emerald-300' : 'border-red-400 bg-red-500/15 text-red-300'}`}>
+              {passed ? 'PASS' : 'FAIL'}
+            </span>
+          </div>
+        ) : (
+          <>
+            <div className="flex flex-wrap items-end gap-x-4 gap-y-1">
+              <span className="text-5xl font-bold tracking-tight text-neutral-50">{pct}%</span>
+              <span className="pb-1 font-mono text-sm text-neutral-400">{correct}/{total} tačnih odgovora</span>
+            </div>
+            <div className="mt-4 h-2 overflow-hidden rounded-full bg-neutral-800">
+              <div className="h-full rounded-full bg-gradient-to-r from-orange-500 to-amber-400 transition-all duration-500" style={{ width: `${pct}%` }} />
+            </div>
+          </>
+        )}
+        <p className="mt-3 text-sm font-semibold text-neutral-100">
+          {simulation ? passed ? 'Položeno u simulaciji' : 'Nije položeno u simulaciji' : 'Vežba završena'}
+          {' · '}{timedOut ? 'vreme je isteklo · ' : ''}trajanje {duration}
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-neutral-300">
+          {simulation ? `Prag prolaza: ${SIMULATION_PASS_SCORE} / 1000.` : scoreMessage(pct)}
+        </p>
         <p className="mt-2 text-xs leading-relaxed text-neutral-500">
-          Ovo je procenat tačnih odgovora na vežbi, ne predviđanje zvaničnog rezultata. AWS ispit
-          koristi skalirani rezultat od 100–1000 poena; granica prolaza je 700.
+          {simulation
+            ? 'Ovo je lokalna procena prema linearnoj formuli za 50 skrivenih bodovanih pitanja. AWS zvanični skor statistički izjednačava između verzija ispita, pa rezultat može biti drugačiji.'
+            : 'Prikazan je procenat tačnih odgovora u vežbi.'}
         </p>
       </section>
 
       {/* --- Statistika po oblastima --- */}
-      {byDomain.length > 1 && (
+      {(simulation || byDomain.length > 1) && (
         <section aria-label="Rezultat po oblastima" className="mt-6 space-y-3">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-500">
-            Po oblastima
+            {simulation ? 'Po oblastima · svih 65 pitanja' : 'Po oblastima'}
           </h2>
           {byDomain.map((d) => {
             const meta = DOMAINS[d.id];
@@ -90,10 +110,10 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
         </section>
       )}
 
-      {/* --- Pregled grešaka --- */}
+      {/* --- Pregled odgovora --- */}
       <section aria-label="Pregled odgovora" className="mt-8">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-500">
-          Netačna i označena pitanja
+          {simulation ? 'Sva pitanja i odgovori' : 'Netačna i prikazana pitanja'}
         </h2>
 
         {review.length === 0 ? (
@@ -110,7 +130,11 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
                 <summary className="cursor-pointer list-none p-4 text-sm text-neutral-300 transition-colors hover:text-neutral-100">
                   <span className="mr-2 font-mono text-xs text-neutral-500 group-open:hidden">▸</span>
                   <span className="mr-2 hidden font-mono text-xs text-neutral-500 group-open:inline">▾</span>
+                  <span className="mr-2 font-mono text-xs text-neutral-400">{r.number}.</span>
                   {r.marked ? '★ ' : ''}{r.questionText}
+                  <span className={`ml-2 font-mono text-xs ${r.wasCorrect ? 'text-emerald-400' : 'text-red-400'}`}>
+                    {r.wasCorrect ? 'Tačno' : r.revealed ? 'Prikazano' : 'Netačno'}
+                  </span>
                 </summary>
                 <div className="border-t border-neutral-800/60 p-4 text-sm leading-relaxed">
                   <p className={r.wasCorrect ? 'text-emerald-400' : 'text-red-400'}>
@@ -144,7 +168,7 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
           onClick={onRestart}
           className="rounded-xl bg-orange-500 px-6 py-3 font-semibold text-neutral-950 transition-colors hover:bg-orange-400"
         >
-          Ponovi ovaj kviz ↻
+          {simulation ? 'Nova simulacija ↻' : 'Ponovi vežbu ↻'}
         </button>
         <button
           type="button"

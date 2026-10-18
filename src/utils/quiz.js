@@ -4,10 +4,10 @@
 // ---------------------------------------------------------------------------
 
 /** Fisher–Yates mesanje — vraca NOV niz, ne mutira ulazni niz. */
-export function shuffle(input) {
+export function shuffle(input, random = Math.random) {
   const arr = [...input];
   for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
@@ -23,10 +23,10 @@ const answerLetters = (answer) => Array.isArray(answer) ? answer : [answer];
  * Priprema pitanje za prikaz: mesa redosled opcija i pamti NA KOJOM poziciji
  * se sada nalazi tacan odgovor, tako da se slojevi prikaza i podaci ne mesaju.
  */
-export function prepareQuestion(q) {
+export function prepareQuestion(q, random = Math.random) {
   const correctOriginal = answerLetters(q.CorrectAnswer).map(letterToIndex);
   const tagged = q.Options.map((text, i) => ({ text, isCorrect: correctOriginal.includes(i) }));
-  const shuffled = shuffle(tagged);
+  const shuffled = shuffle(tagged, random);
   return {
     id: q.ID,
     domain: q.Domain,
@@ -36,6 +36,69 @@ export function prepareQuestion(q) {
     explanation: q.Explanation,
     reference: q.Reference ?? null,
   };
+}
+
+// Najbliža celobrojna raspodela AWS težina 24/30/34/12 za 65 pitanja.
+export const SIMULATION_QUOTAS = Object.freeze({ 1: 16, 2: 19, 3: 22, 4: 8 });
+export const SIMULATION_SECONDS = 90 * 60;
+export const SIMULATION_SCORED_COUNT = 50;
+export const SIMULATION_PASS_SCORE = 700;
+
+export const secondsUntil = (deadline, now = Date.now()) => Math.max(0, Math.ceil((deadline - now) / 1000));
+export const secondsSince = (start, now = Date.now()) => Math.max(0, Math.floor((now - start) / 1000));
+
+/** Uzorak bez ponavljanja, sa tačnim brojem pitanja po domenu. */
+export function createSimulationQuestions(questions, random = Math.random) {
+  const selected = Object.entries(SIMULATION_QUOTAS).flatMap(([domain, count]) => {
+    const pool = questions.filter((q) => q.Domain === Number(domain));
+    if (pool.length < count) {
+      throw new Error(`Nema dovoljno pitanja za domen ${domain}: ${pool.length}/${count}`);
+    }
+    return shuffle(pool, random).slice(0, count);
+  });
+  const prepared = shuffle(selected, random).map((q) => prepareQuestion(q, random));
+  const unscoredPositions = new Set(
+    shuffle(prepared.map((_, index) => index), random).slice(0, prepared.length - SIMULATION_SCORED_COUNT),
+  );
+  return prepared.map((q, index) => ({ ...q, isScored: !unscoredPositions.has(index) }));
+}
+
+/** Jedinstveno računanje rezultata za oba moda. Otkriven odgovor se ne boduje. */
+export function buildResults(questions, answers, markedIds = [], revealedIds = []) {
+  const marked = new Set(markedIds);
+  const revealed = new Set(revealedIds);
+  return questions.map((item, index) => {
+    const chosen = answers[item.id] ?? [];
+    const correct = item.correctIndices;
+    const wasRevealed = revealed.has(item.id);
+    return {
+      id: item.id,
+      number: index + 1,
+      domain: item.domain,
+      questionText: item.text,
+      userAnswer: wasRevealed
+        ? 'Prikazan odgovor bez potvrde'
+        : chosen.length ? chosen.map((i) => item.options[i]).join(' · ') : 'Bez odgovora',
+      correctAnswer: correct.map((i) => item.options[i]).join(' · '),
+      explanation: item.explanation,
+      reference: item.reference,
+      wasCorrect: !wasRevealed && chosen.length === correct.length &&
+        new Set(chosen).size === correct.length && correct.every((i) => chosen.includes(i)),
+      marked: marked.has(item.id),
+      revealed: wasRevealed,
+    };
+  });
+}
+
+/** Lokalna linearna procena; AWS ne objavljuje svoju formulu za statističko skaliranje. */
+export function calculateSimulationScore(questions, results) {
+  const scored = questions.filter((q) => q.isScored === true);
+  if (questions.length !== 65 || scored.length !== SIMULATION_SCORED_COUNT) {
+    throw new Error('Simulacija mora imati 65 pitanja, od kojih se boduje tačno 50.');
+  }
+  const resultById = new Map(results.map((result) => [result.id, result]));
+  const correctScored = scored.filter((q) => resultById.get(q.id)?.wasCorrect === true).length;
+  return Math.round(100 + (correctScored / SIMULATION_SCORED_COUNT) * 900);
 }
 
 /**

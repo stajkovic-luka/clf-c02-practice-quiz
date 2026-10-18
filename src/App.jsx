@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import rawQuestions from './data/questions.json';
-import { validateQuestions, prepareQuestion, shuffle } from './utils/quiz';
+import { validateQuestions, prepareQuestion, shuffle, createSimulationQuestions } from './utils/quiz';
 import HomeScreen from './components/HomeScreen';
+import PracticeScreen from './components/PracticeScreen';
 import QuizScreen from './components/QuizScreen';
 import ResultsScreen from './components/ResultsScreen';
 import StickyNote from './components/StickyNote';
@@ -16,22 +17,23 @@ const allQuestions = validateQuestions(rawQuestions);
  */
 export default function App() {
   const [screen, setScreen] = useState('home');
-  const [mode, setMode] = useState('all'); // 'all' | 1..4
+  const [session, setSession] = useState({ type: 'practice', domain: 'all' });
   const [quizData, setQuizData] = useState([]); // pripremljena (izmešana) pitanja
-  const [results, setResults] = useState([]);
+  const [report, setReport] = useState(null);
   const [quizKey, setQuizKey] = useState(0); // forsira remount QuizScreen pri restartu
 
   // Lebdeća beleška — tekst živi samo u memoriji (React state), bez ikakvog storage-a.
   const [noteOpen, setNoteOpen] = useState(false);
   const [noteText, setNoteText] = useState('');
 
-  /** Pokreće kviz: filtrira po modu, meša pitanja i opcije. */
-  function startQuiz(nextMode) {
-    const pool =
-      nextMode === 'all' ? allQuestions : allQuestions.filter((q) => q.Domain === nextMode);
-    setQuizData(shuffle(pool).map(prepareQuestion));
-    setMode(nextMode);
-    setResults([]);
+  /** Svaki start priprema nov, potpuno odvojen pokušaj. */
+  function startQuiz(type, domain = 'all') {
+    const questions = type === 'simulation'
+      ? createSimulationQuestions(allQuestions)
+      : shuffle(domain === 'all' ? allQuestions : allQuestions.filter((q) => q.Domain === domain)).map((q) => prepareQuestion(q));
+    setQuizData(questions);
+    setSession({ type, domain });
+    setReport(null);
     setQuizKey((k) => k + 1);
     setScreen('quiz');
   }
@@ -42,12 +44,24 @@ export default function App() {
         <HomeScreen questions={allQuestions} onStart={startQuiz} />
       )}
 
-      {screen === 'quiz' && (
+      {screen === 'quiz' && session.type === 'practice' && (
+        <PracticeScreen
+          key={quizKey}
+          questions={quizData}
+          onFinish={(result) => {
+            setReport(result);
+            setScreen('results');
+          }}
+          onExit={() => setScreen('home')}
+        />
+      )}
+
+      {screen === 'quiz' && session.type === 'simulation' && (
         <QuizScreen
           key={quizKey}
           questions={quizData}
-          onFinish={(finalResults) => {
-            setResults(finalResults);
+          onFinish={(result) => {
+            setReport(result);
             setScreen('results');
           }}
           onExit={() => setScreen('home')}
@@ -56,9 +70,9 @@ export default function App() {
 
       {screen === 'results' && (
         <ResultsScreen
-          results={results}
-          mode={mode}
-          onRestart={() => startQuiz(mode)}
+          report={report}
+          session={session}
+          onRestart={() => startQuiz(session.type, session.domain)}
           onHome={() => setScreen('home')}
         />
       )}
