@@ -1,0 +1,366 @@
+[
+  {
+    "ID": 1,
+    "Domain": 1,
+    "QuestionText": "A company is evaluating a migration from its on-premises data center to the AWS Cloud. Which of the following is a key financial advantage of cloud computing identified by AWS?",
+    "Options": [
+      "It eliminates all computing costs after the initial migration.",
+      "It trades upfront capital expenses (CapEx) for variable expenses (OpEx) that scale with actual usage.",
+      "It requires customers to buy physical hardware in bulk to receive discounts.",
+      "It locks customers into long-term contracts for every service they use."
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS navodi 'trade capital expense for variable expense' kao prvu od šest prednosti cloud-a: umesto velikih unapred uloženih kapitalnih troškova (serveri, data centar, struja), plaća se samo ono što se stvarno potroši (pay-as-you-go model). Na ispitu, kad se traži finansijska prednost cloud-a, CapEx ka OpEx formulacija je gotovo uvek tačan odgovor. Ostale opcije su suprotne stvarnosti: cloud ne eliminiše troškove, ne traži kupovinu hardvera u bulk (to je ekonomija obima AWS-a, ne obaveza klijenta), a On-Demand model ne zahteva nikakve ugovore.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 2,
+    "Domain": 1,
+    "QuestionText": "AWS can offer lower pay-as-you-go prices than many traditional IT providers. Which concept primarily explains this advantage?",
+    "Options": [
+      "Vertical scaling of EC2 instances",
+      "The pay-as-you-go billing model itself",
+      "Economies of scale from aggregating usage across a very large number of customers",
+      "Reserved capacity discounts that every customer receives automatically"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Economies of scale (ekonomija obima) je zvanična prednost AWS Cloud-a: AWS kupuje hardver, struju i mrežnu infrastrukturu u ogromnim količinama za milione klijenata, pa jedinična cena opada — a AWS tu uštedu prenosi na klijente kroz niže pay-as-you-go cene. Ovo nije isto što i popusti koje donose Reserved Instances ili Savings Plans (to su posebni cenovni modeli zasnovani na tvojoj obavezi o obimu korišćenja), niti ima veze sa vertikalnim skaliranjem resursa.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 3,
+    "Domain": 1,
+    "QuestionText": "An e-commerce company expects a large traffic spike during a seasonal sale, followed by a return to normal levels. Which cloud characteristic allows it to add compute capacity for the spike and release it afterwards, paying only for what it uses?",
+    "Options": [
+      "Elasticity",
+      "Agility",
+      "Durability",
+      "Availability"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Elastičnost znači da kapacitet prati tražnju: servisi poput Amazon EC2 Auto Scaling automatski dodaju instance (scale out) kad opterećenje raste i uklanjaju ih (scale in) kad se vrati na normalu — plaća se samo ono što se koristi, što je idealno za sezonske skokove. Ne mešati sa sličnim terminima: Agility je brzina i lakoća eksperimentisanja (novo okruženje za minute, bez velike investicije), Durability je sposobnost skladištenja da sačuva podatke bez gubitka tokom vremena (npr. Amazon S3 garantuje 99.999999999% trajnosti), a Availability je vreme u kojem je aplikacija dostupna za upotrebu (tipično se postiže kroz više Availability Zones).",
+    "Reference": "https://aws.amazon.com/ec2/autoscaling/"
+  },
+  {
+    "ID": 4,
+    "Domain": 1,
+    "QuestionText": "A company runs a critical web application in a single data center. Management requires that the failure of a single facility must not take the application offline. What is the recommended AWS approach?",
+    "Options": [
+      "Run the application on a larger EC2 instance type in the same Availability Zone.",
+      "Take hourly Amazon EBS snapshots of the instance.",
+      "Deploy the application across multiple edge locations.",
+      "Deploy the application across multiple Availability Zones in the same Region behind an Elastic Load Balancer."
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Availability Zone (AZ) je jedan ili više fizički odvojenih data centara unutar Regiona, sa nezavisnom strujom, mrežom i hlađenjem — kvar jednog AZ-a ne utiče na ostale. Zato je standardan obrazac za high availability: instance u dva ili više AZ-a + Elastic Load Balancer koji raspoređuje saobraćaj i zaobilazi nezdrave instance. Veća instanca ili EBS snapshot ne štite od pada celog objekta, a edge lokacije su keš tačke CDN-a (Amazon CloudFront), ne mesto za izvršavanje aplikacije.",
+    "Reference": "https://aws.amazon.com/about-aws/global-infrastructure/"
+  },
+  {
+    "ID": 5,
+    "Domain": 1,
+    "QuestionText": "Under the AWS shared responsibility model, which task is the responsibility of AWS?",
+    "Options": [
+      "Configuring security groups on an Amazon EC2 instance",
+      "Securing the physical infrastructure — data center facilities, hardware, and networking — that runs all AWS services",
+      "Patching the guest operating system on an Amazon EC2 instance",
+      "Managing IAM users, groups, and roles in a customer account"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Podela u modelu deljene odgovornosti: AWS je odgovoran za bezbednost OBLAKA ('security of the cloud') — objekti, hardver, mreža i softverski sloj koji pokreće sve servise. Klijent je odgovoran za bezbednost U oblaku ('security in the cloud') — patch-ovanje guest operativnog sistema na EC2 instancama, konfiguracija security groups, IAM korisnici i permisije, šifrovanje podataka i S3 bucket politike. Skraćeno za pamćenje: AWS štiti infrastrukturu na kojoj sve stoji, a ti štitiš sve što na tu infrastrukturu postaviš.",
+    "Reference": "https://aws.amazon.com/compliance/shared-responsibility-model/"
+  },
+  {
+    "ID": 6,
+    "Domain": 1,
+    "QuestionText": "A development team wants to experiment more cheaply and quickly: spin up test environments in minutes and destroy them as soon as the experiment is over. Which benefit of the AWS Cloud does this describe?",
+    "Options": [
+      "Elasticity",
+      "High availability",
+      "Increased speed and agility",
+      "Economies of scale"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Agility (brzina i okretnost) je prednost da resurse dobiješ u minutima umesto u nedeljama, pa je eksperimentisanje jeftino — ako ideja ne valja, okruženje se obriše bez posledica i gotovo bez troška. AWS ovo zove 'increase speed and agility'. Za razliku od toga: Elasticity je automatsko prilagođavanje kapaciteta tražnji, High availability je otpornost aplikacije na greške infrastrukture, a Economies of scale je sniženje jedinične cene kroz masovnu kupovnu moć AWS-a.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 7,
+    "Domain": 2,
+    "QuestionText": "A security review finds that an IAM user has the AdministratorAccess managed policy attached, although the user only needs to read objects from one Amazon S3 bucket. Which security principle is being violated?",
+    "Options": [
+      "Least privilege",
+      "Defense in depth",
+      "Encryption in transit",
+      "Multi-factor authentication"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Principle of least privilege (načelo najmanje privilegije) nalaže da korisnik dobije samo permisije potrebne za svoj posao — ovde bi bilo dovoljno read-only pravo na taj jedan bucket. Preširoke permisije povećavaju štetu ako dođe do kompromitacije naloga. IAM nudi alate za sprovođenje ovog načela: access advisor pokazuje koje su permisije stvarno korišćene, a politike se mogu granularno ograničiti na konkretne resurse. MFA, šifrovanje i layered defense su takođe dobre prakse, ali nisu tema ovog propusta.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html"
+  },
+  {
+    "ID": 8,
+    "Domain": 2,
+    "QuestionText": "An application running on an Amazon EC2 instance needs read access to an Amazon S3 bucket. What is the AWS best practice for granting these permissions?",
+    "Options": [
+      "Create an IAM user, generate long-term access keys, and hardcode them in the application.",
+      "Store the credentials of the AWS account root user on the instance.",
+      "Make the S3 bucket publicly readable.",
+      "Attach an IAM role with the required permissions policy to the EC2 instance."
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "IAM role (uloga) je mehanizam namenjen baš ovakvim slučajevima: EC2 instanci se dodeli role, a aplikacija na njoj automatski dobija privremene kredencijale koje se rotiraju bez tvog učešća — nema hardcodovanja tajni u kodu ili config fajlovima. Hardcodovane access keys IAM korisnika (a kamoli root kredencijali) su klasična bezbednosna rupa: iste tajne na više instanci, teška rotacija, velika šteta pri kompromitaciji. Javno čitljiv S3 bucket je sigurnosni incident koji čeka da se desi.",
+    "Reference": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html"
+  },
+  {
+    "ID": 9,
+    "Domain": 2,
+    "QuestionText": "Which AWS feature adds a second authentication factor, beyond the password, to better protect the AWS account root user?",
+    "Options": [
+      "An IAM password policy",
+      "Multi-factor authentication (MFA)",
+      "AWS Shield",
+      "An IAM permissions boundary"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "MFA zahteva drugi faktor pored lozinke — authenticator aplikaciju (TOTP) ili FIDO2 security key — pa ukradena lozinka sama po sebi više ne otvara nalog. AWS izričito preporučuje omogućavanje MFA za root korisnika i privilegovane IAM korisnike, pri čemu je FIDO2 hardware key najjača preporučena opcija za root. Password policy samo postiže bolje lozinke (dužina, kompleksnost, rotacija), permissions boundary ograničava maksimalne permisije koje politika može dati, a AWS Shield štiti od DDoS napada — nijedan od njih nije drugi faktor autentifikacije.",
+    "Reference": "https://aws.amazon.com/iam/features/mfa/"
+  },
+  {
+    "ID": 10,
+    "Domain": 2,
+    "QuestionText": "A company wants to centrally govern multiple AWS accounts: group them into one organization, receive a single bill, and restrict which AWS services and actions each account can use. Which service provides these capabilities?",
+    "Options": [
+      "Amazon Cognito",
+      "AWS Trusted Advisor",
+      "AWS Organizations",
+      "AWS IAM Identity Center"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS Organizations omogućava centralno upravljanje više naloga: jedan management nalog na vrhu, hijerarhija organizational units (OU), consolidated billing (jedan objedinjen račun za sve naloge) i service control policies (SCP) koje postavljaju gornju granicu dozvoljenih akcija u nalogima — važno: SCP ne dodeljuje prava, samo ograničava maksimum onoga što je moguće. Trusted Advisor daje preporuke za cenu, bezbednost i performance, Cognito je autentifikacija korisnika aplikacija (ne AWS naloga), a IAM Identity Center centralizuje SSO pristup ljudi — ali ne objedinjuje billing i ne postavlja SCP-jeve.",
+    "Reference": "https://aws.amazon.com/organizations/"
+  },
+  {
+    "ID": 11,
+    "Domain": 2,
+    "QuestionText": "An auditor asks for AWS third-party compliance attestations — such as SOC reports and ISO certifications — that apply to the AWS Cloud. Where should the company download these documents?",
+    "Options": [
+      "AWS Artifact",
+      "AWS Certificate Manager (ACM)",
+      "Amazon Inspector",
+      "AWS Trusted Advisor"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS Artifact je self-service portal sa AWS izveštajima o bezbednosti i usklađenosti (SOC 1/2/3, PCI DSS, ISO 27001 i slično) i sporazumima poput NDA i BAA — upravo ono što treba revizoru. Uobičajena zamerka na ispitu je ACM, koji izdaje i obnavlja SSL/TLS sertifikate (tema 'certificate' je slična reč, druga namena). Amazon Inspector automatski skenira EC2 instance i kontejnere na ranjivosti, a Trusted Advisor daje preporuke najbolje prakse po pitanju troškova i bezbednosti.",
+    "Reference": "https://aws.amazon.com/artifact/"
+  },
+  {
+    "ID": 12,
+    "Domain": 2,
+    "QuestionText": "Which AWS service automatically protects every AWS customer against common infrastructure-level (Layer 3/Layer 4) DDoS attacks at no additional charge?",
+    "Options": [
+      "AWS WAF",
+      "Amazon GuardDuty",
+      "AWS Shield Standard",
+      "AWS Firewall Manager"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS Shield Standard je automatski uključen i besplatan za sve AWS klijente — štiti od najčešćih L3/L4 DDoS napada (npr. SYN flood, UDP reflection). Plaćeni AWS Shield Advanced dodaje napredniju zaštitu, 24/7 pristup DDoS Response Team (SRT) i zaštitu od skoka troškova uzrokovanog napadom. Za razliku od toga: AWS WAF je web application firewall na L7 koji filtrira HTTP zahteve po pravilima (SQL injection, XSS), Amazon GuardDuty je inteligentna detekcija pretnji analizom logova, a AWS Firewall Manager centralno upravlja WAF i Shield pravilima preko više naloga.",
+    "Reference": "https://aws.amazon.com/shield/"
+  },
+  {
+    "ID": 13,
+    "Domain": 2,
+    "QuestionText": "A security policy requires that data stored in Amazon S3 be encrypted, and that the company controls the encryption keys, their rotation, and an audit trail of key usage. Which service should the company use?",
+    "Options": [
+      "AWS Certificate Manager (ACM)",
+      "AWS Key Management Service (AWS KMS)",
+      "AWS Secrets Manager",
+      "Amazon Macie"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS KMS centralno upravlja kriptografskim ključevima: kreiranje, automatska rotacija, politike pristupa ključevima i log svake upotrebe ključa u AWS CloudTrail. Amazon S3 direktno podržava server-side enkripciju sa KMS ključevima (SSE-KMS), pa se zahtev iz zadatka pokriva u potpunosti kroz KMS. AWS Secrets Manager čuva i rotira tajne aplikacija poput DB lozinki (ne kriptuje bucket podatke), Amazon Macie otkriva osetljive podatke (PII) u S3 pomoću machine learning-a, a ACM izdaje TLS sertifikate.",
+    "Reference": "https://aws.amazon.com/kms/"
+  },
+  {
+    "ID": 14,
+    "Domain": 3,
+    "QuestionText": "What best describes an AWS Availability Zone?",
+    "Options": [
+      "A geographic area in the world where AWS clusters data centers, such as Europe (Stockholm)",
+      "One or more discrete data centers with redundant power, networking, and connectivity, located within a Region",
+      "A location that caches copies of content physically close to end users",
+      "An isolated segment of a customer's VPC into which resources are launched"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Availability Zone je jedan ili više diskretnih (fizički odvojenih) data centara unutar jednog Regiona, sa redundantnom strujom, mrežom i konektivnošću, projektovanih tako da kvar jednog AZ-a ne utiče na druge — međusobno su povezani privatnim vlaknima velike propusnosti i male latencije. Ostale opcije su druge hijerarhijske celine: A) je definicija Regiona, C) je edge location (keš tačka CloudFront CDN-a), D) je subnet unutar VPC-a. Za ispit zapamti hijerarhiju: Region sadrži više AZ-ova, a edge lokacije čine globalnu CloudFront mrežu.",
+    "Reference": "https://aws.amazon.com/about-aws/global-infrastructure/"
+  },
+  {
+    "ID": 15,
+    "Domain": 3,
+    "QuestionText": "A company runs a MySQL database and wants AWS to handle server maintenance, OS patching, and automated backups, while continuing to use standard SQL. Which service best fits this requirement?",
+    "Options": [
+      "Amazon EC2 with a self-managed MySQL installation",
+      "Amazon DynamoDB",
+      "Amazon Redshift",
+      "Amazon Relational Database Service (Amazon RDS)"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Amazon RDS je managed relacionalna baza podataka: AWS upravlja instancom, OS patch-evima, automatizovanim backupima i (uz Multi-AZ opciju) high availability-om, a ti koristiš standardan SQL. Podržava MySQL, PostgreSQL, MariaDB, Oracle i SQL Server; Amazon Aurora je MySQL/PostgreSQL-kompatibilna, performantnija AWS varijanta. Na EC2 bi sve navedeno radio sam (to je IaaS pristup), Amazon DynamoDB je serverless NoSQL key-value baza (ne koristi standard SQL), a Amazon Redshift je data warehouse za analitiku petabajta podataka — ne za OLTP radne terete.",
+    "Reference": "https://aws.amazon.com/rds/"
+  },
+  {
+    "ID": 16,
+    "Domain": 3,
+    "QuestionText": "A financial firm must retain compliance archives for 10 years at the lowest possible storage cost; a retrieval time of up to 12 hours is acceptable. Which Amazon S3 storage class is the most cost-effective choice?",
+    "Options": [
+      "S3 Glacier Deep Archive",
+      "S3 Standard",
+      "S3 Standard-Infrequent Access (S3 Standard-IA)",
+      "S3 Intelligent-Tiering"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "S3 Glacier Deep Archive je najjeftinija S3 storage klasa, namenjena dugotrajnim arhivama: minimalno trajanje čuvanja je 180 dana, a standardno preuzimanje traje oko 12 sati (bulk varijanta oko 48 sati) — upravo profil 'najniža cena + sati dostave' iz zadatka. Za poređenje: S3 Glacier Flexible Retrieval ima preuzimanje od 1–5 sati, S3 Glacier Instant Retrieval donosi milisekundno preuzimanje za arhive kojima se pristupa npr. kvartalno, S3 Standard je za čest pristup, S3 Standard-IA za redak ali neposredan pristup, a S3 Intelligent-Tiering automatski premešta objekte između tier-ova po obrascu pristupa. Ključne reči na ispitu: 'lowest cost' + 'hours to retrieve' → Deep Archive.",
+    "Reference": "https://aws.amazon.com/s3/storage-classes/glacier/"
+  },
+  {
+    "ID": 17,
+    "Domain": 3,
+    "QuestionText": "A developer wants to run a Python function that processes images automatically every time a new file is uploaded to Amazon S3, without managing any servers. Which service should they use?",
+    "Options": [
+      "Amazon EC2",
+      "Amazon Elastic Container Service (Amazon ECS)",
+      "AWS Lambda",
+      "AWS Elastic Beanstalk"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS Lambda je serverless compute servis: postaviš kod (funkciju), povežeš je na događaj poput S3 upload-a, i AWS pokreće kod samo kad se događaj desi — automatski skalira, a plaća se po broju poziva i vremenu izvršavanja (milisekunde), bez ikakvih servera za održavanje. Amazon EC2 zahteva da sam upravljaš instancama i kapacitetom; Amazon ECS orkestruje kontejnere (serverless varijanta je AWS Fargate, ali i dalje u kontejnerskom modelu); AWS Elastic Beanstalk je PaaS koji deployuje aplikaciju, koja se ipak izvršava na instancama koje se rezervišu za tebe.",
+    "Reference": "https://aws.amazon.com/lambda/"
+  },
+  {
+    "ID": 18,
+    "Domain": 3,
+    "QuestionText": "A media company wants to serve video content to a global audience with low latency by caching copies of files physically closer to viewers. Which service should they use?",
+    "Options": [
+      "Amazon Route 53",
+      "Amazon CloudFront",
+      "AWS Global Accelerator",
+      "Amazon API Gateway"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Amazon CloudFront je content delivery network (CDN): kešira sadržaj na stotinama edge lokacija (points of presence) širom sveta, pa gledalac preuzima fajl iz fizički najbliže tačke — niža latencija i manje opterećenje poreka (origin, npr. S3 bucket ili Application Load Balancer). Amazon Route 53 je managed DNS servis (usmerava zahteve na ispravne adrese, ali ne kešira sadržaj), AWS Global Accelerator rutira TCP/UDP saobraćaj kroz AWS globalnu mrežu radi boljih performansi i dostupnosti (bez keširanja fajlova), a Amazon API Gateway je za izgradnju, objavljivanje i upravljanje API-jima.",
+    "Reference": "https://aws.amazon.com/cloudfront/"
+  },
+  {
+    "ID": 19,
+    "Domain": 3,
+    "QuestionText": "After a security incident, a team must determine exactly who launched a specific Amazon EC2 instance and when. Which AWS service records this account API activity?",
+    "Options": [
+      "Amazon CloudWatch",
+      "AWS Trusted Advisor",
+      "AWS Config",
+      "AWS CloudTrail"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS CloudTrail beleži API aktivnost naloga: ko je pozvao akciju, kada, sa koje IP adrese i na kom resursu — istorija događaja od 90 dana dostupna je bez ikakve dodatne konfiguracije, a kompletne logove možeš slati u S3 i CloudWatch Logs za dugotrajnu analizu. Klasična razlika za ispit: CloudWatch odgovara na pitanje 'kako se resurs ponaša' (metrike, logovi, alarmi), dok CloudTrail odgovara na pitanje 'ko je šta uradio' (revizija API poziva). AWS Config prati promene konfiguracije resursa kroz vreme i usklađenost sa pravilima, a Trusted Advisor daje preporuke za troškove, performanse i bezbednost.",
+    "Reference": "https://aws.amazon.com/cloudtrail/"
+  },
+  {
+    "ID": 20,
+    "Domain": 4,
+    "QuestionText": "A company will run steady, predictable production workloads 24/7 for the next 3 years and wants to minimize compute costs. Which pricing option should they choose?",
+    "Options": [
+      "On-Demand Instances",
+      "Savings Plans",
+      "Spot Instances",
+      "Dedicated Hosts"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Savings Plans znače obavezu na konzistentan obim korišćenja (izražen u dolarima po satu) na period od 1 ili 3 godine, uz značajan popust: EC2 Instance Savings Plans idu do oko 72% uštede (vezano za instancu/family u Regionu), a Compute Savings Plans do oko 66% uz slobodu korišćenja preko EC2, Fargate i Lambda. Sličnu logiku imaju i Reserved Instances. On-Demand je najfleksibilniji ali najskuplji model bez obaveze; Spot daje najveći popust (do 90%) ali AWS može prekinuti kapacitet sa 2 minuta upozorenja — neprihvatljivo za radno opterećenje koje mora neprekidno raditi; Dedicated Host je fizički rezervisan server (najčešće zbog licenci i compliance zahteva) i najskuplja opcija.",
+    "Reference": "https://aws.amazon.com/savingsplans/"
+  },
+  {
+    "ID": 21,
+    "Domain": 4,
+    "QuestionText": "Which EC2 purchasing option offers a discount of up to 90% compared to On-Demand pricing, in exchange for the possibility that AWS reclaims the capacity with a two-minute interruption notice?",
+    "Options": [
+      "Spot Instances",
+      "Reserved Instances",
+      "On-Demand Instances",
+      "Dedicated Hosts"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Spot Instances koriste AWS neiskorišćen kapacitet: popust ide do 90% u odnosu na On-Demand, ali AWS može da zahteva instancu nazad uz obaveštenje od 2 minuta. Zato su idealni za interruptible i fault-tolerant poslove: batch obrada, render farme, obrada podataka, veliki izračuni i CI/CD pipeline-i koji mogu da se ponove. Za kontinuirane produkcije tereta koriste se On-Demand (fleksibilno, bez obaveze) ili Reserved Instances / Savings Plans (popust uz obavezu), a Dedicated Host je fizički server posvećen jednom klijentu (npr. zbog licenci vezanih za sokete ili compliance pravila).",
+    "Reference": "https://aws.amazon.com/ec2/spot/"
+  },
+  {
+    "ID": 22,
+    "Domain": 4,
+    "QuestionText": "The finance team wants an email notification whenever actual or forecasted monthly spending exceeds 80% of the planned amount. Which AWS tool should they configure?",
+    "Options": [
+      "AWS Pricing Calculator",
+      "AWS Cost Explorer",
+      "AWS Budgets",
+      "AWS Marketplace"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS Budgets omogućava definisanje budžeta po trošku ili korišćenju i slanje alarma (email / SNS notifikacije) kad stvarni ili prognozirani (forecasted) troškovi pređu zadate pragove — npr. na 80% i 100% budžeta; postoji i automatska reakcija (budget actions) poput ograničavanja permisija. AWS Cost Explorer vizuelno prikazuje i analizira istoriju troškova i prognoze, ali ne prati pragove ni ne šalje alarme; AWS Pricing Calculator procenjuje troškove pre deploy-a; AWS Marketplace je katalog softvera trećih strana koji se naplaćuje kroz AWS račun.",
+    "Reference": "https://aws.amazon.com/aws-cost-management/aws-budgets/"
+  },
+  {
+    "ID": 23,
+    "Domain": 4,
+    "QuestionText": "Before deploying a new workload, a solutions architect wants to estimate the expected monthly AWS cost of the planned configuration. Which tool should be used?",
+    "Options": [
+      "AWS Budgets",
+      "AWS Cost Explorer",
+      "AWS Trusted Advisor",
+      "AWS Pricing Calculator"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS Pricing Calculator (calculator.aws) omogućava modelovanje buduće arhitekture servis-po-servis i daje procenu mesevnog troška pre nego što se bilo šta deployuje — idealno za planiranje i poređenje varijanti. AWS Cost Explorer analizira postojeću potrošnju (istorija + prognoza), dakle radi sa troškovima koji su se već desili; AWS Budgets alarmira kad troškovi pređu pragove; AWS Trusted Advisor predlaže optimizacije postojećih resursa (npr. identifikuje EC2 instance sa niskom iskorišćenošću). Pravilo za ispit: procena PRE deploy-a → Pricing Calculator; analiza NAKON deploy-a → Cost Explorer.",
+    "Reference": "https://calculator.aws/"
+  },
+  {
+    "ID": 24,
+    "Domain": 4,
+    "QuestionText": "A company has multiple AWS accounts and wants a single monthly bill for all of them, with usage combined so that Reserved Instance and Savings Plans benefits can be shared across the accounts. Which capability provides this?",
+    "Options": [
+      "AWS Cost and Usage Report",
+      "Consolidated billing with AWS Organizations",
+      "AWS Budgets",
+      "AWS Pricing Calculator"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Consolidated billing se ostvaruje kroz AWS Organizations: management nalog postaje jedini platioc — jedan mesevni račun za sve naloge u organizaciji, a kombinovana korišćenja donose konkretne benefite: popusti Reserved Instances i Savings Plans mogu se deliti između naloga, a lakše se dostižu niži cenovni tier-ovi po obimu. AWS Cost and Usage Report (CUR) je detaljni izveštaj potrošnje red-po-red koji se eksportuje u S3 za analitiku, AWS Budgets služi za alarme na pragove troškova, a AWS Pricing Calculator za procenu pre deploy-a.",
+    "Reference": "https://aws.amazon.com/organizations/"
+  },
+  {
+    "ID": 25,
+    "Domain": 4,
+    "QuestionText": "Which AWS Support plan is included at no additional cost for every AWS customer account?",
+    "Options": [
+      "Basic Support",
+      "Business Support+",
+      "Enterprise Support",
+      "Unified Operations"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Basic Support je besplatan i automatski uključen za sve AWS klijente: pristup dokumentaciji, whitepaper-ima i zajednici AWS re:Post, podrška na nivou naloga (billing i service limit pitanja), AWS Health Dashboard, a danas i core Trusted Advisor provere. Viši planovi dodaju 24/7 tehničku podršku sa SLA vremenima odgovora. Napomena o aktuelnim promenama: AWS je tokom 2025. reorganizovao lineup planova — klasični Developer i Business planovi su ukinuti u korist Business Support+ (i novog najvišeg tier-a Unified Operations), dok Enterprise Support i dalje postoji i uključuje tehničkog account menadžera (TAM). Mnogi stariji kursevi i dalje pokazuju staru četvorku Basic/Developer/Business/Enterprise — za ispit i praksu proveri zvaničnu stranicu AWS Support planova.",
+    "Reference": "https://aws.amazon.com/premiumsupport/plans/"
+  },
+  {
+    "ID": 26,
+    "Domain": 4,
+    "QuestionText": "Under the current AWS Free Tier model, what does a newly created AWS account receive?",
+    "Options": [
+      "Unlimited free access to all AWS services for one year",
+      "A 50% discount on all AWS services for the first 12 months",
+      "$100 in credits immediately, with the ability to earn up to $100 more — up to $200 in total credits over the first 6 months",
+      "One year of unlimited free Amazon EC2 and Amazon S3 usage"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Po aktuelnom modelu (uveđen sredinom 2025. godine), novi AWS nalog na Free planu dobija $100 kredita odmah i može zaraditi još do $100 — ukupno do $200 kredita kroz prvih 6 meseci, za eksperimentisanje sa preko 90 servisa bez iznenađenja na računu; nalog se sam zatvara posle 6 meseci ili kad se krediti potroše, osim ako se ne prebaci na plaćeni plan. Pored toga, 30+ servisa je 'always free' u okviru mesečnih limita (npr. AWS Lambda sa 1 milijun besplatnih zahteva mesečno i DynamoDB sa 25 GB besplatnog prostora). Napomena za pripremu: stariji CLF-C02 materijali često opisuju prethodni model sa 12 meseci besplatne korišćenja selektovanih servisa — nalozi otvoreni pre promene zadržali su taj model, ali za nove naloge važi kreditni model.",
+    "Reference": "https://aws.amazon.com/free/"
+  }
+]

@@ -1,0 +1,12 @@
+# Zavisnosti i build artefakti
+node_modules
+dist
+
+# Sistemski fajlovi
+.DS_Store
+
+# Logovi i lokalni fajlovi
+npm-debug.log*
+*.local
+.env
+.env.*

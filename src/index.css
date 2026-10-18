@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Male osnovne dorade preko Tailwind baze (preflight reset je vec ukljucen) */
+::selection {
+  background-color: rgba(249, 115, 22, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
