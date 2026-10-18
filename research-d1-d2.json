@@ -1,0 +1,1506 @@
+[
+  {
+    "ID": 184,
+    "Domain": 1,
+    "QuestionText": "Which THREE AWS Cloud Adoption Framework (AWS CAF) perspectives focus primarily on technical capabilities? (Choose 3.)",
+    "Options": [
+      "Operations",
+      "Security",
+      "Governance",
+      "Business",
+      "People",
+      "Platform"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "B",
+      "F"
+    ],
+    "Explanation": "AWS CAF svrstava Platform, Security i Operations među perspektive usmjerene na tehničke sposobnosti; Business, People i Governance pokrivaju poslovne sposobnosti.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/overview-aws-cloud-adoption-framework.html"
+  },
+  {
+    "ID": 185,
+    "Domain": 1,
+    "QuestionText": "A CFO wants to confirm that cloud investments advance measurable business outcomes. Which AWS CAF perspective should lead this work?",
+    "Options": [
+      "Security",
+      "Operations",
+      "Business",
+      "Platform"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Business perspektiva povezuje ulaganja u cloud s poslovnom strategijom i mjerljivim ishodima.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/business-perspective.html"
+  },
+  {
+    "ID": 186,
+    "Domain": 1,
+    "QuestionText": "A company must retrain staff and adapt its culture before a cloud migration. Which AWS CAF perspective addresses this?",
+    "Options": [
+      "Platform",
+      "People",
+      "Governance",
+      "Security"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "People perspektiva bavi se kulturom, vještinama, organizacijom i promjenom radne snage.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/people-perspective.html"
+  },
+  {
+    "ID": 187,
+    "Domain": 1,
+    "QuestionText": "The executive team wants oversight of cloud programs and their transformation risks. Which AWS CAF perspective fits best?",
+    "Options": [
+      "Operations",
+      "Platform",
+      "Security",
+      "Governance"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Governance perspektiva koordinira cloud inicijative, upravlja rizicima i prati ostvarenje koristi.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/governance-perspective.html"
+  },
+  {
+    "ID": 188,
+    "Domain": 1,
+    "QuestionText": "An engineering group is building a standardized, scalable cloud landing platform for application teams. Which AWS CAF perspective is most relevant?",
+    "Options": [
+      "People",
+      "Business",
+      "Governance",
+      "Platform"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Platform perspektiva ubrzava isporuku cloud opterećenja kroz skalabilno okruženje i zajedničke platformne sposobnosti.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/platform-perspective.html"
+  },
+  {
+    "ID": 189,
+    "Domain": 1,
+    "QuestionText": "A CISO is defining controls for confidentiality, integrity, and availability during migration. Which AWS CAF perspective leads this work?",
+    "Options": [
+      "Operations",
+      "Security",
+      "Business",
+      "People"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Security perspektiva AWS CAF usmjerena je na povjerljivost, integritet i dostupnost podataka i opterećenja.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/security-perspective.html"
+  },
+  {
+    "ID": 190,
+    "Domain": 1,
+    "QuestionText": "An operations team must define how cloud services will be monitored and run to meet business needs. Which AWS CAF perspective applies?",
+    "Options": [
+      "Platform",
+      "Business",
+      "People",
+      "Operations"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Operations perspektiva obuhvata pružanje i rad cloud usluga na nivou koji ispunjava poslovne potrebe.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/operations-perspective.html"
+  },
+  {
+    "ID": 191,
+    "Domain": 1,
+    "QuestionText": "Which TWO are business outcomes described by AWS CAF? (Choose 2.)",
+    "Options": [
+      "Guaranteed zero cloud spend",
+      "Elimination of all compliance obligations",
+      "Improved ESG performance",
+      "Ownership of AWS data centers",
+      "Reduced business risk"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "E"
+    ],
+    "Explanation": "AWS CAF navodi smanjenje poslovnog rizika i poboljšanje ESG učinka kao moguće ishode cloud transformacije, ne kao bezuslovne garancije.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/overview-aws-cloud-adoption-framework.html"
+  },
+  {
+    "ID": 192,
+    "Domain": 1,
+    "QuestionText": "A company wants a structured way to assess its cloud readiness and prioritize transformation opportunities. Which AWS framework should it consult?",
+    "Options": [
+      "AWS Trusted Advisor",
+      "Amazon Route 53",
+      "AWS Cloud Adoption Framework (AWS CAF)",
+      "AWS Shield"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS CAF pomaže procjeni spremnosti, prioritetima i razvoju plana cloud transformacije.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/overview-aws-cloud-adoption-framework.html"
+  },
+  {
+    "ID": 193,
+    "Domain": 1,
+    "QuestionText": "A legacy application cannot move yet because of an unresolved dependency on specialized local hardware. Which of the seven migration strategies applies for now?",
+    "Options": [
+      "Repurchase",
+      "Rehost",
+      "Retire",
+      "Retain"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Retain znači ostaviti aplikaciju u postojećem okruženju dok zavisnosti ili poslovni razlozi sprečavaju migraciju.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "ID": 194,
+    "Domain": 1,
+    "QuestionText": "A company moves a large set of virtual machines to a cloud version of the same platform without changing the applications. Which migration strategy is this?",
+    "Options": [
+      "Refactor",
+      "Retire",
+      "Relocate",
+      "Repurchase"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Relocate prenosi opterećenja na cloud verziju platforme bez prepisivanja aplikacija ili bitne promjene operativnog modela.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "ID": 195,
+    "Domain": 1,
+    "QuestionText": "A company redesigns a monolithic application into cloud-native components to use new capabilities. Which migration strategy describes this?",
+    "Options": [
+      "Retire",
+      "Rehost",
+      "Retain",
+      "Refactor or re-architect"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Refactor ili re-architect podrazumijeva značajnu promjenu arhitekture radi iskorištavanja cloud mogućnosti.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "ID": 196,
+    "Domain": 1,
+    "QuestionText": "Which TWO situations match the migration strategy named replatform? (Choose 2.)",
+    "Options": [
+      "Move a self-managed database to Amazon RDS with modest application changes",
+      "Decommission an unused application",
+      "Adopt a managed runtime without redesigning the whole application",
+      "Move unchanged virtual machines to EC2",
+      "Keep an application on premises"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "C"
+    ],
+    "Explanation": "Replatform uvodi ciljane optimizacije, poput upravljane baze ili runtime-a, bez potpunog redizajna aplikacije.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "ID": 197,
+    "Domain": 1,
+    "QuestionText": "Before selecting migration waves, a team maps application dependencies and usage across its data center. What is the main purpose of this discovery?",
+    "Options": [
+      "Choose suitable migration strategies and sequence dependent workloads",
+      "Guarantee that every application can be rehosted unchanged",
+      "Replace all security reviews",
+      "Eliminate the need for a business case"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Procjena portfelja i međuzavisnosti služi izboru odgovarajuće strategije iz 7 Rs i planiranju redoslijeda migracije.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "ID": 198,
+    "Domain": 1,
+    "QuestionText": "A phased migration moves one group of dependent applications at a time instead of every workload in one cutover. What does this approach primarily help manage?",
+    "Options": [
+      "S3 object durability",
+      "IAM password complexity",
+      "Migration risk and dependencies",
+      "Physical ownership of AWS Regions"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Migracijski talasi se planiraju prema zavisnostima i složenosti kako bi se smanjili rizik i prekidi.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "ID": 199,
+    "Domain": 1,
+    "QuestionText": "Which TWO statements correctly compare rehosting and refactoring? (Choose 2.)",
+    "Options": [
+      "Refactoring means leaving the workload on premises",
+      "Rehosting always creates a new SaaS subscription",
+      "Rehosting typically makes few application changes",
+      "Refactoring may redesign the application to use cloud capabilities",
+      "Both require retiring the application"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "D"
+    ],
+    "Explanation": "Rehosting premješta aplikaciju uz malo promjena, dok refactoring mijenja arhitekturu za cloud mogućnosti.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "ID": 200,
+    "Domain": 1,
+    "QuestionText": "A company must include its existing software licenses in the migration business case. What does BYOL mean?",
+    "Options": [
+      "Ignore license costs in total cost of ownership",
+      "Bring eligible existing licenses to the cloud subject to vendor and AWS terms",
+      "Buy all licenses only through AWS Marketplace",
+      "AWS automatically grants every commercial license"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "BYOL znači upotrebu postojećih podobnih licenci u AWS-u pod primjenjivim licencnim pravilima.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-microsoft-workloads-aws/licensing-microsoft-workloads.html"
+  },
+  {
+    "ID": 201,
+    "Domain": 1,
+    "QuestionText": "A cloud estimate includes the software license in the hourly service price. How does this differ from BYOL?",
+    "Options": [
+      "The instance cannot be stopped",
+      "The license is included rather than supplied separately by the customer",
+      "The customer must own the data center",
+      "The service becomes free after one year"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Kod license-included modela cijena obuhvata licencu, dok BYOL koristi zasebnu postojeću podobnu licencu korisnika.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-microsoft-workloads-aws/licensing-microsoft-workloads.html"
+  },
+  {
+    "ID": 202,
+    "Domain": 1,
+    "QuestionText": "Which THREE cost categories belong in an on-premises total cost of ownership (TCO) estimate? (Choose 3.)",
+    "Options": [
+      "Only S3 request charges",
+      "Only an AWS support plan",
+      "Power and cooling",
+      "Data-center space",
+      "Only CloudFront cache misses",
+      "Server hardware"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "D",
+      "F"
+    ],
+    "Explanation": "TCO vlastitog data centra uključuje hardver, električnu energiju/hlađenje, prostor i održavanje. Ove stavke treba uporediti s cloud troškovima.",
+    "Reference": "https://aws.amazon.com/blogs/migration-and-modernization/unlocking-cloud-savings-a-rehost-migration-playbook-part-1-assess-explore-cost-components/"
+  },
+  {
+    "ID": 203,
+    "Domain": 1,
+    "QuestionText": "An EC2 fleet is consistently underutilized. Which action best illustrates right-sizing?",
+    "Options": [
+      "Move every workload to the most expensive Region",
+      "Keep unused instances running permanently",
+      "Select smaller instance types that still meet measured performance needs",
+      "Add more large instances without measuring demand"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Right-sizing usklađuje veličinu resursa sa stvarnim zahtjevima i smanjuje plaćanje neiskorištenog kapaciteta.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain1.html"
+  },
+  {
+    "ID": 204,
+    "Domain": 1,
+    "QuestionText": "A company replaces manual server setup with repeatable automated provisioning. Which TWO benefits are most directly expected? (Choose 2.)",
+    "Options": [
+      "Ownership of AWS facilities",
+      "A guarantee of zero security risk",
+      "More consistent deployments",
+      "Less repetitive manual work",
+      "Removal of all cloud bills"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "D"
+    ],
+    "Explanation": "Automatizacija smanjuje ručni rad i povećava ponovljivost procesa; ne uklanja sama po sebi troškove ili rizike.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain1.html"
+  },
+  {
+    "ID": 205,
+    "Domain": 1,
+    "QuestionText": "Which expense is most clearly a variable cloud operating expense rather than an upfront capital expense?",
+    "Options": [
+      "Purchase of racks and cooling equipment",
+      "Purchase of servers for a new data center",
+      "Construction of a data-center building",
+      "Monthly charges for compute actually consumed"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Korišteni cloud kapacitet se obično naplaćuje kao promjenljiv operativni trošak; kupovina fizičke infrastrukture je kapitalno ulaganje.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 206,
+    "Domain": 1,
+    "QuestionText": "Which cost remains relevant when moving a workload from a company-owned data center to AWS?",
+    "Options": [
+      "Application operations and data transfer charges",
+      "Building an AWS Availability Zone",
+      "Paying AWS facility electricity bills directly",
+      "Purchasing AWS physical networking switches"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Migracija uklanja korisnikovo vlasništvo nad AWS fizičkom infrastrukturom, ali operativni i potrošni cloud troškovi ostaju.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain1.html"
+  },
+  {
+    "ID": 207,
+    "Domain": 1,
+    "QuestionText": "A workload is idle each night but the team has provisioned servers for peak demand 24 hours a day. Which cloud practice can reduce waste?",
+    "Options": [
+      "Scale down or stop resources during idle periods",
+      "Use a larger fixed server permanently",
+      "Disable all usage monitoring",
+      "Increase the baseline capacity"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Usklađivanje kapaciteta s potražnjom smanjuje plaćanje neiskorištenih resursa; treba provjeriti da resursi podržavaju zaustavljanje ili skaliranje.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain1.html"
+  },
+  {
+    "ID": 208,
+    "Domain": 1,
+    "QuestionText": "A company wants to compare a three-year AWS plan against replacing its local servers. Which approach produces the most useful business comparison?",
+    "Options": [
+      "Ignore staffing and facility costs",
+      "Compare only the initial EC2 hourly price with the server purchase price",
+      "Compare total costs across both options using consistent assumptions",
+      "Assume cloud services have no ongoing charges"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "TCO poređenje traži iste vremenske granice i sve relevantne troškove, uključujući infrastrukturu, rad i korištenje.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain1.html"
+  },
+  {
+    "ID": 209,
+    "Domain": 1,
+    "QuestionText": "A team is reviewing how identities, data, and systems are protected in its AWS workload. Which Well-Architected pillar is primary?",
+    "Options": [
+      "Security",
+      "Sustainability",
+      "Reliability",
+      "Cost Optimization"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Security pillar obuhvata zaštitu podataka, sistema i imovine te upravljanje sigurnosnim rizicima.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 210,
+    "Domain": 1,
+    "QuestionText": "An application team wants better visibility into operations and a repeatable process for learning from incidents. Which Well-Architected pillar applies?",
+    "Options": [
+      "Performance Efficiency",
+      "Sustainability",
+      "Cost Optimization",
+      "Operational Excellence"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Operational Excellence usmjerava rad, nadzor i stalno poboljšavanje procedura opterećenja.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 211,
+    "Domain": 1,
+    "QuestionText": "Which pillar asks whether a workload can recover from infrastructure disruption and keep meeting its intended function?",
+    "Options": [
+      "Cost Optimization",
+      "Sustainability",
+      "Reliability",
+      "Security"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Reliability obuhvata dosljedno izvršavanje funkcije opterećenja i oporavak od poremećaja.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 212,
+    "Domain": 1,
+    "QuestionText": "A workload delivers correct results but its selected compute resources are inefficient for the current traffic pattern. Which pillar should guide the resource choice?",
+    "Options": [
+      "Performance Efficiency",
+      "Operational Excellence",
+      "Reliability",
+      "Security"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Performance Efficiency traži efikasnu upotrebu compute resursa uz održavanje performansi pri promjeni potražnje.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 213,
+    "Domain": 1,
+    "QuestionText": "A company wants to deliver required business value at the lowest sustainable resource cost. Which Well-Architected pillar is most relevant?",
+    "Options": [
+      "Operational Excellence",
+      "Reliability",
+      "Security",
+      "Cost Optimization"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Cost Optimization usmjerava uklanjanje rasipanja i izbor isplativih resursa uz ispunjenje poslovnih zahtjeva.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 214,
+    "Domain": 1,
+    "QuestionText": "Which TWO practices align with the Sustainability pillar? (Choose 2.)",
+    "Options": [
+      "Run oversized idle servers without measurement",
+      "Improve resource utilization",
+      "Reduce resources required per transaction",
+      "Replicate every object in every Region by default",
+      "Ignore energy efficiency"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "C"
+    ],
+    "Explanation": "Sustainability podstiče veće iskorištenje kapaciteta i manju potrošnju resursa po jedinici rada.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 215,
+    "Domain": 1,
+    "QuestionText": "Which THREE items are AWS Well-Architected pillars? (Choose 3.)",
+    "Options": [
+      "Security",
+      "Vendor lock-in",
+      "Data residency",
+      "Procurement",
+      "Reliability",
+      "Sustainability"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "E",
+      "F"
+    ],
+    "Explanation": "Reliability, Security i Sustainability su tri od šest zvaničnih Well-Architected stubova.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 216,
+    "Domain": 1,
+    "QuestionText": "A company stores backups that must be recoverable years later, while its live site must remain reachable most of the time. Which pairing matches these requirements?",
+    "Options": [
+      "Agility for backups; elasticity for the live site",
+      "Cost optimization for both with no other concern",
+      "Durability for backups; availability for the live site",
+      "Availability for backups; durability for DNS"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Durability opisuje očuvanje podataka, a availability vrijeme kada je usluga dostupna korisnicima.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 217,
+    "Domain": 1,
+    "QuestionText": "A service must continue after a single component fails. Which design practice most directly reduces the single point of failure?",
+    "Options": [
+      "Disable health checks",
+      "Use one instance for every tier",
+      "Use redundant components in separate failure domains",
+      "Increase only the disk size of one server"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Redundancija u odvojenim domenima otkaza smanjuje vjerovatnoću da kvar jedne komponente zaustavi uslugu.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 218,
+    "Domain": 1,
+    "QuestionText": "A retailer launches the same application near customers in two continents. Which TWO factors should it evaluate when choosing Regions? (Choose 2.)",
+    "Options": [
+      "Data residency requirements",
+      "The color of AWS console icons",
+      "The alphabetical order of Region names",
+      "Latency to users",
+      "The number of IAM users"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "D"
+    ],
+    "Explanation": "Izbor Regiona treba uzeti u obzir latenciju korisnika i zahtjeve o lokaciji podataka.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain1.html"
+  },
+  {
+    "ID": 219,
+    "Domain": 1,
+    "QuestionText": "An operations team creates temporary test environments from templates and removes them after each experiment. What is the main cloud advantage illustrated?",
+    "Options": [
+      "Ownership of physical hardware",
+      "Permanent fixed capacity",
+      "Faster experimentation and agility",
+      "Elimination of all governance"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Resursi na zahtjev i automatizovani šabloni omogućavaju brze eksperimente i ukidanje nepotrebnog okruženja.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 220,
+    "Domain": 1,
+    "QuestionText": "Which TWO statements about managed services are generally true? (Choose 2.)",
+    "Options": [
+      "AWS operates more of the underlying infrastructure",
+      "The customer still manages its data and access choices",
+      "All managed services have identical pricing",
+      "All customer responsibilities disappear",
+      "The customer must replace AWS hardware"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "B"
+    ],
+    "Explanation": "Upravljani servisi prenose dio operativnog rada na AWS, dok korisnik i dalje odgovara za podatke, pristup i pravilnu konfiguraciju.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 221,
+    "Domain": 1,
+    "QuestionText": "An application has been overprovisioned to handle a rare annual event. Which AWS Cloud property allows capacity to be released after the event?",
+    "Options": [
+      "Elasticity",
+      "License portability",
+      "Data residency",
+      "Encryption at rest"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Elastičnost podrazumijeva skaliranje i naviše i naniže prema potražnji, pa se privremeni kapacitet može osloboditi.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 222,
+    "Domain": 1,
+    "QuestionText": "Which situation is an example of capital expenditure for an on-premises data center?",
+    "Options": [
+      "Paying for AWS Lambda invocations",
+      "Buying racks and servers before they are used",
+      "Paying for consumed S3 storage each month",
+      "Paying a monthly AWS data transfer bill"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Unaprijed kupljeni fizički serveri i oprema su kapitalni troškovi.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain1.html"
+  },
+  {
+    "ID": 223,
+    "Domain": 1,
+    "QuestionText": "A company wants to spread the benefit of AWS scale across many customers. What explains AWS ability to lower unit prices?",
+    "Options": [
+      "Each customer buying its own facility",
+      "Disabling metering",
+      "A requirement to reserve every service for three years",
+      "Economies of scale"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS agregira potražnju velikog broja korisnika, što stvara ekonomiju obima i može smanjiti jedinične troškove.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 224,
+    "Domain": 1,
+    "QuestionText": "A licensing review finds an application can either use an eligible existing license or buy a license-included AWS offering. What is the first decision to make?",
+    "Options": [
+      "Compare license terms and total cost for the workload",
+      "Assume BYOL is always cheaper",
+      "Ignore vendor restrictions",
+      "Assume every license transfers automatically"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS vodič za cloud ekonomiku razlikuje BYOL i uključene licence; podobnost i ukupni trošak zavise od pravila dobavljača i opterećenja.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-microsoft-workloads-aws/licensing-microsoft-workloads.html"
+  },
+  {
+    "ID": 225,
+    "Domain": 1,
+    "QuestionText": "Why should a migration business case include cooling and power, even though they are not application code costs?",
+    "Options": [
+      "They determine IAM permissions",
+      "AWS always bills the customer directly for a data-center utility meter",
+      "They replace all AWS service charges",
+      "They are real on-premises infrastructure costs in TCO"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "TCO obuhvata troškove rada vlastite infrastrukture, uključujući struju i hlađenje.",
+    "Reference": "https://aws.amazon.com/blogs/migration-and-modernization/unlocking-cloud-savings-a-rehost-migration-playbook-part-1-assess-explore-cost-components/"
+  },
+  {
+    "ID": 226,
+    "Domain": 1,
+    "QuestionText": "An organization measures cloud readiness across workforce, security, platform, and governance before creating a migration roadmap. Which framework organizes these areas?",
+    "Options": [
+      "Amazon SQS",
+      "AWS Budgets",
+      "AWS Shield Standard",
+      "AWS Cloud Adoption Framework"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS CAF grupiše sposobnosti u šest perspektiva koje pomažu procjeni spremnosti i planiranju transformacije.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/overview-aws-cloud-adoption-framework.html"
+  },
+  {
+    "ID": 227,
+    "Domain": 1,
+    "QuestionText": "Which TWO AWS CAF perspectives are primarily business-oriented? (Choose 2.)",
+    "Options": [
+      "Platform",
+      "Security",
+      "People",
+      "Operations",
+      "Governance"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "E"
+    ],
+    "Explanation": "People i Governance su među poslovno usmjerenim perspektivama AWS CAF; Platform, Security i Operations su tehničke.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/overview-aws-cloud-adoption-framework.html"
+  },
+  {
+    "ID": 228,
+    "Domain": 1,
+    "QuestionText": "A company wants to increase revenue through faster product innovation after cloud adoption. How does AWS CAF describe this?",
+    "Options": [
+      "A guaranteed result of every migration",
+      "A physical security control",
+      "A potential business outcome",
+      "An EC2 purchasing option"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS CAF navodi rast prihoda kao mogući ishod digitalne transformacije, ne kao zagarantovan rezultat.",
+    "Reference": "https://docs.aws.amazon.com/whitepapers/latest/overview-aws-cloud-adoption-framework/overview-aws-cloud-adoption-framework.html"
+  },
+  {
+    "ID": 229,
+    "Domain": 1,
+    "QuestionText": "An application is moved unchanged to cloud-hosted virtual machines, and modernization is planned for a later phase. Which TWO statements are accurate? (Choose 2.)",
+    "Options": [
+      "The initial move is rehosting",
+      "The application has already been refactored",
+      "Modernization can occur after migration",
+      "The move is automatically a SaaS repurchase",
+      "The initial move is retiring"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "C"
+    ],
+    "Explanation": "Rehosting premješta aplikaciju bez promjena; AWS vodič opisuje mogućnost modernizacije nakon početne migracije.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html"
+  },
+  {
+    "ID": 230,
+    "Domain": 1,
+    "QuestionText": "A database remains active on premises while its target in AWS is prepared. Which approach helps keep the target synchronized until cutover?",
+    "Options": [
+      "Stopping all writes for the entire project",
+      "A one-time static screenshot of the database server",
+      "Ongoing data replication",
+      "Rebuilding the application UI first"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Kontinuirana replikacija prenosi kasnije promjene izvora na cilj i pomaže smanjiti prekid pri završnom prebacivanju.",
+    "Reference": "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.html"
+  },
+  {
+    "ID": 231,
+    "Domain": 1,
+    "QuestionText": "A team optimizes image processing so that each request uses fewer compute resources without lowering quality. Which TWO Well-Architected goals may this support? (Choose 2.)",
+    "Options": [
+      "Sustainability",
+      "Eliminating IAM",
+      "Avoiding all monitoring",
+      "Cost Optimization",
+      "Owning AWS facilities"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "D"
+    ],
+    "Explanation": "Manja potrošnja resursa po zadatku može smanjiti trošak i uticaj na životnu sredinu.",
+    "Reference": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html"
+  },
+  {
+    "ID": 232,
+    "Domain": 1,
+    "QuestionText": "A company expects demand in a new market but does not know whether the launch will succeed. Which TWO cloud traits reduce the commitment risk? (Choose 2.)",
+    "Options": [
+      "Ability to release unused capacity",
+      "Mandatory data-center construction",
+      "Fixed peak capacity for years",
+      "On-demand provisioning",
+      "Ownership of physical servers"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "D"
+    ],
+    "Explanation": "Nabavka kapaciteta po potrebi i njegovo oslobađanje smanjuju rizik ulaganja prije nego što je potražnja poznata.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 233,
+    "Domain": 1,
+    "QuestionText": "Which comparison best separates agility from elasticity in cloud computing?",
+    "Options": [
+      "Agility is physical durability; elasticity is a support plan",
+      "Agility is data encryption; elasticity is identity management",
+      "Both mean owning fixed hardware",
+      "Agility is speed of change and experimentation; elasticity adjusts capacity to demand"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Agility označava brzinu promjene i eksperimentisanja; elasticity prilagođava kapacitet stvarnoj potražnji.",
+    "Reference": "https://aws.amazon.com/what-is-cloud-computing/"
+  },
+  {
+    "ID": 234,
+    "Domain": 2,
+    "QuestionText": "An AWS Organizations SCP denies Amazon EC2 in a member account, but an IAM role there allows ec2:RunInstances. What is the effective result?",
+    "Options": [
+      "The IAM allow overrides the SCP",
+      "The management account pays for the launch automatically",
+      "The launch is denied by the SCP",
+      "The action becomes read-only"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "SCP ograničava maksimalne dozvole naloga članice; IAM dozvola ne može zaobići zabranu iz SCP-a.",
+    "Reference": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html"
+  },
+  {
+    "ID": 235,
+    "Domain": 2,
+    "QuestionText": "A company attaches a restrictive SCP to its organization root. Which account is NOT affected by that SCP?",
+    "Options": [
+      "The management account",
+      "All member accounts",
+      "A member account root user",
+      "An account in a child OU"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "SCP ne utiče na korisnike i uloge u management nalogu; ograničenja se primjenjuju na naloge članice.",
+    "Reference": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html"
+  },
+  {
+    "ID": 236,
+    "Domain": 2,
+    "QuestionText": "Which TWO activities does AWS Security Hub CSPM perform? (Choose 2.)",
+    "Options": [
+      "Runs checks against security standards and best practices",
+      "Patches the guest operating system on every EC2 instance",
+      "Collects findings from supported AWS security services",
+      "Replaces IAM identity policies with its own permissions",
+      "Guarantees that every compliance requirement is met"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "C"
+    ],
+    "Explanation": "Security Hub CSPM provjerava kontrole prema standardima i najboljim praksama te prikuplja nalaze podržanih sigurnosnih servisa; ne preuzima korisničke IAM ili EC2 obaveze.",
+    "Reference": "https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html"
+  },
+  {
+    "ID": 237,
+    "Domain": 2,
+    "QuestionText": "An IAM identity policy allows many actions, but a permissions boundary allows only S3 read actions. What can the identity do under these two policies?",
+    "Options": [
+      "Only actions allowed by both the identity policy and boundary",
+      "All actions because boundaries are advisory",
+      "Every action in the boundary even if no identity allow exists",
+      "Every action in the identity policy"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Permissions boundary postavlja maksimum za dozvole identiteta; efektivne dozvole su presjek relevantnih dozvola.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html"
+  },
+  {
+    "ID": 238,
+    "Domain": 2,
+    "QuestionText": "A team attaches a policy directly to an S3 bucket to grant a partner account access. What type of policy is it?",
+    "Options": [
+      "Password policy",
+      "Resource-based policy",
+      "Service control policy",
+      "Identity-based policy"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Bucket policy je politika resursa: vezana je za S3 bucket i navodi kome je pristup dozvoljen.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+  },
+  {
+    "ID": 239,
+    "Domain": 2,
+    "QuestionText": "An IAM user has no policy that allows a specific AWS action. What is the default authorization result?",
+    "Options": [
+      "Allow if MFA is enabled",
+      "Deny",
+      "Read-only access",
+      "Allow"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "IAM zahtjevi su podrazumijevano zabranjeni dok primjenjiva politika ne doda potrebnu dozvolu.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html"
+  },
+  {
+    "ID": 240,
+    "Domain": 2,
+    "QuestionText": "An identity policy allows an action while a resource policy explicitly denies it. What happens?",
+    "Options": [
+      "The request is retried automatically",
+      "The allow wins",
+      "The request is denied",
+      "Access is granted to root only"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Izričiti Deny u primjenjivoj politici nadjačava Allow.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html"
+  },
+  {
+    "ID": 241,
+    "Domain": 2,
+    "QuestionText": "A cross-account IAM role can be assumed by a partner only if the role trusts the partner principal. Which policy establishes that trust?",
+    "Options": [
+      "AWS Budgets policy",
+      "EC2 security group",
+      "S3 Lifecycle rule",
+      "Role trust policy"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Trust policy uloge određuje koji identitet smije preuzeti ulogu; dozvolna politika uloge definiše šta uloga zatim može raditi.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+  },
+  {
+    "ID": 242,
+    "Domain": 2,
+    "QuestionText": "A company uses an external identity provider to authenticate employees before they access AWS accounts. Which concept is this?",
+    "Options": [
+      "Dedicated hosting",
+      "Edge caching",
+      "Federation",
+      "S3 replication"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Federation povezuje vanjski identitet s AWS pristupom bez stvaranja zasebnog dugoročnog IAM korisnika za svaku osobu.",
+    "Reference": "https://aws.amazon.com/iam/identity-center/"
+  },
+  {
+    "ID": 243,
+    "Domain": 2,
+    "QuestionText": "Which credential is normally used by an IAM user for programmatic AWS API requests?",
+    "Options": [
+      "Console password alone",
+      "Access key ID and secret access key",
+      "An S3 object key",
+      "An ACM certificate"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "IAM access key par služi potpisivanju programskih API zahtjeva; treba koristiti privremene kredencijale kada je moguće.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+  },
+  {
+    "ID": 244,
+    "Domain": 2,
+    "QuestionText": "Which TWO statements about IAM groups are true? (Choose 2.)",
+    "Options": [
+      "Groups automatically rotate database passwords",
+      "A group itself cannot sign in",
+      "A group replaces an AWS Organizations account",
+      "Groups are AWS Regions",
+      "Groups can simplify assigning the same permissions to multiple IAM users"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "E"
+    ],
+    "Explanation": "IAM grupa služi zajedničkom upravljanju dozvolama korisnika i nije identitet koji se prijavljuje.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+  },
+  {
+    "ID": 245,
+    "Domain": 2,
+    "QuestionText": "An application on AWS Lambda needs to call DynamoDB. Which credential approach is preferred?",
+    "Options": [
+      "Make the table public",
+      "Embed root access keys in the function code",
+      "Attach an execution role with necessary permissions",
+      "Reuse a developer console password"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Lambda execution role daje funkciji privremene AWS kredencijale s potrebnim dozvolama.",
+    "Reference": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html"
+  },
+  {
+    "ID": 246,
+    "Domain": 2,
+    "QuestionText": "Which AWS service issues temporary credentials after an authorized principal assumes an IAM role?",
+    "Options": [
+      "Amazon Macie",
+      "AWS Security Token Service (AWS STS)",
+      "AWS Artifact",
+      "AWS Certificate Manager"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS STS izdaje privremene sigurnosne kredencijale za sesije uloga.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html"
+  },
+  {
+    "ID": 247,
+    "Domain": 2,
+    "QuestionText": "A company wants to reduce risk from root credentials. Which TWO practices are appropriate? (Choose 2.)",
+    "Options": [
+      "Avoid creating root access keys",
+      "Share root credentials among developers",
+      "Keep root signed in continuously",
+      "Enable MFA for root",
+      "Use root for all automation"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "D"
+    ],
+    "Explanation": "AWS preporučuje MFA i izbjegavanje root access ključeva; svakodnevni rad treba koristiti namjenske identitete.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html"
+  },
+  {
+    "ID": 248,
+    "Domain": 2,
+    "QuestionText": "Under the shared responsibility model for Amazon EC2, who patches the guest operating system?",
+    "Options": [
+      "The internet service provider",
+      "The customer",
+      "AWS alone",
+      "AWS Marketplace seller"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Kod EC2 AWS održava osnovnu infrastrukturu, dok korisnik upravlja gostujućim operativnim sistemom.",
+    "Reference": "https://aws.amazon.com/compliance/shared-responsibility-model/"
+  },
+  {
+    "ID": 249,
+    "Domain": 2,
+    "QuestionText": "A company moves from self-managed MySQL on EC2 to Amazon RDS. Which responsibility shifts to AWS?",
+    "Options": [
+      "Classification of customer data",
+      "Choice of who may query the database",
+      "Maintenance of the underlying database host and operating system",
+      "Design of the application schema"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Kod RDS-a AWS upravlja infrastrukturom i host OS-om, a korisnik zadržava odgovornost za podatke i pristup.",
+    "Reference": "https://aws.amazon.com/compliance/shared-responsibility-model/"
+  },
+  {
+    "ID": 250,
+    "Domain": 2,
+    "QuestionText": "For a serverless AWS Lambda workload, which task remains the customer’s responsibility?",
+    "Options": [
+      "Patch the Lambda service infrastructure",
+      "Replace AWS network equipment",
+      "Maintain AWS physical servers",
+      "Secure application code and configure function permissions"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS upravlja infrastrukturom Lambda servisa; korisnik odgovara za svoj kod, podatke i dodijeljene dozvole.",
+    "Reference": "https://aws.amazon.com/compliance/shared-responsibility-model/"
+  },
+  {
+    "ID": 251,
+    "Domain": 2,
+    "QuestionText": "A company stores confidential files in S3. Which TWO security decisions remain with the customer? (Choose 2.)",
+    "Options": [
+      "Repair of AWS storage hardware",
+      "Power supply to AWS facilities",
+      "Who can access the files",
+      "Physical security of AWS data centers",
+      "How the files are classified and protected"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "E"
+    ],
+    "Explanation": "Korisnik određuje klasifikaciju podataka i pristup S3 objektima; AWS štiti fizičku infrastrukturu.",
+    "Reference": "https://aws.amazon.com/compliance/shared-responsibility-model/"
+  },
+  {
+    "ID": 252,
+    "Domain": 2,
+    "QuestionText": "A website must encrypt traffic between browsers and its HTTPS endpoint. Which control primarily provides encryption in transit?",
+    "Options": [
+      "S3 Lifecycle policy",
+      "AWS Budgets",
+      "EC2 Auto Scaling",
+      "TLS certificate and HTTPS"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "TLS štiti komunikaciju u prenosu; certifikati se mogu izdavati i upravljati kroz ACM.",
+    "Reference": "https://aws.amazon.com/certificate-manager/"
+  },
+  {
+    "ID": 253,
+    "Domain": 2,
+    "QuestionText": "An architect must distinguish encryption at rest from encryption in transit. Which option is encryption at rest?",
+    "Options": [
+      "Route DNS queries with Route 53",
+      "Encrypt stored S3 objects",
+      "Scale EC2 instances",
+      "Use HTTPS between a browser and endpoint"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Enkripcija at rest štiti pohranjene podatke; HTTPS/TLS štiti podatke tokom prijenosa.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain2.html"
+  },
+  {
+    "ID": 254,
+    "Domain": 2,
+    "QuestionText": "A team wants centralized control of encryption keys used by multiple AWS services and auditing of key usage. Which service fits?",
+    "Options": [
+      "Amazon CloudFront",
+      "AWS WAF",
+      "AWS Shield",
+      "AWS KMS"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS KMS upravlja ključevima i integriše se s AWS servisima; relevantne KMS radnje mogu se evidentirati u CloudTrail-u.",
+    "Reference": "https://aws.amazon.com/kms/"
+  },
+  {
+    "ID": 255,
+    "Domain": 2,
+    "QuestionText": "A developer confuses application secrets with encryption keys. Which pairing is correct?",
+    "Options": [
+      "KMS stores only IAM passwords",
+      "Both are DDoS firewalls",
+      "Secrets Manager stores secrets; KMS manages cryptographic keys",
+      "Secrets Manager caches web pages; KMS manages DNS"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Secrets Manager upravlja tajnama poput lozinki, dok KMS upravlja kriptografskim ključevima.",
+    "Reference": "https://aws.amazon.com/secrets-manager/"
+  },
+  {
+    "ID": 256,
+    "Domain": 2,
+    "QuestionText": "A public website needs a managed TLS certificate for its Application Load Balancer. Which AWS service is designed for this?",
+    "Options": [
+      "AWS Config",
+      "AWS Certificate Manager",
+      "AWS Artifact",
+      "Amazon GuardDuty"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "ACM izdaje, upravlja i obnavlja podržane javne TLS certifikate za integrisane AWS servise.",
+    "Reference": "https://aws.amazon.com/certificate-manager/"
+  },
+  {
+    "ID": 257,
+    "Domain": 2,
+    "QuestionText": "A compliance officer needs AWS SOC reports, not a report about the company’s own resource configuration. Which service should they open?",
+    "Options": [
+      "AWS Config",
+      "AWS Artifact",
+      "Amazon CloudWatch",
+      "AWS Budgets"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS Artifact pruža AWS izvještaje i dokumente o usklađenosti, uključujući SOC materijale.",
+    "Reference": "https://aws.amazon.com/artifact/"
+  },
+  {
+    "ID": 258,
+    "Domain": 2,
+    "QuestionText": "A company requires dedicated hardware security modules in AWS to control its own cryptographic keys. Which service is designed for this?",
+    "Options": [
+      "AWS KMS",
+      "AWS CloudHSM",
+      "AWS Artifact",
+      "Amazon Macie"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS CloudHSM obezbjeđuje namjenske HSM uređaje pod korisnikovom kontrolom za kriptografske operacije i ključeve.",
+    "Reference": "https://aws.amazon.com/cloudhsm/"
+  },
+  {
+    "ID": 259,
+    "Domain": 2,
+    "QuestionText": "A security team sees unusual API calls and suspicious activity in its account and wants managed threat detection. Which service should it use?",
+    "Options": [
+      "AWS Artifact",
+      "Amazon Inspector",
+      "Amazon GuardDuty",
+      "Amazon Macie"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "GuardDuty analizira odgovarajuće signale i generiše nalaze o potencijalno zlonamjernoj aktivnosti.",
+    "Reference": "https://aws.amazon.com/guardduty/"
+  },
+  {
+    "ID": 260,
+    "Domain": 2,
+    "QuestionText": "A team wants automated checks for vulnerable third-party packages included in supported AWS Lambda functions. Which service provides this?",
+    "Options": [
+      "AWS WAF",
+      "Amazon Macie",
+      "AWS Artifact",
+      "Amazon Inspector"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Amazon Inspector Lambda standard scanning pregledava zavisnosti u podržanim Lambda funkcijama i slojevima te prijavljuje poznate ranjivosti paketa.",
+    "Reference": "https://docs.aws.amazon.com/inspector/latest/user/scanning_resources_lambda.html"
+  },
+  {
+    "ID": 261,
+    "Domain": 2,
+    "QuestionText": "Which service discovers and classifies sensitive data such as personal identifiers in S3?",
+    "Options": [
+      "AWS Organizations",
+      "AWS Shield",
+      "Amazon GuardDuty",
+      "Amazon Macie"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Macie pronalazi osjetljive podatke u Amazon S3 i izvještava o nalazima.",
+    "Reference": "https://aws.amazon.com/macie/"
+  },
+  {
+    "ID": 262,
+    "Domain": 2,
+    "QuestionText": "Which TWO statements correctly distinguish GuardDuty from Inspector? (Choose 2.)",
+    "Options": [
+      "Both replace IAM authorization",
+      "Inspector identifies software vulnerabilities in supported workloads",
+      "GuardDuty is a cost calculator",
+      "GuardDuty detects suspicious activity and threats",
+      "Inspector issues TLS certificates"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "D"
+    ],
+    "Explanation": "GuardDuty je detekcija prijetnji, a Inspector procjena ranjivosti podržanih opterećenja.",
+    "Reference": "https://aws.amazon.com/guardduty/"
+  },
+  {
+    "ID": 263,
+    "Domain": 2,
+    "QuestionText": "A team must block web requests matching SQL injection patterns before they reach an Application Load Balancer. Which service is appropriate?",
+    "Options": [
+      "AWS Artifact",
+      "AWS KMS",
+      "AWS WAF",
+      "Amazon SQS"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS WAF filtrira HTTP(S) zahtjeve prema pravilima, uključujući obrasce uobičajenih web napada.",
+    "Reference": "https://aws.amazon.com/waf/"
+  },
+  {
+    "ID": 264,
+    "Domain": 2,
+    "QuestionText": "A service is exposed to network-layer DDoS attacks. Which AWS offering is automatically available at no added charge?",
+    "Options": [
+      "AWS Shield Standard",
+      "Amazon Macie",
+      "AWS Shield Advanced",
+      "AWS Firewall Manager"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Shield Standard je automatski uključen i štiti od čestih mrežnih i transportnih DDoS napada.",
+    "Reference": "https://aws.amazon.com/shield/"
+  },
+  {
+    "ID": 265,
+    "Domain": 2,
+    "QuestionText": "Which AWS offering adds access to the DDoS Response Team for eligible protected resources?",
+    "Options": [
+      "AWS Artifact",
+      "AWS Shield Standard",
+      "Amazon GuardDuty",
+      "AWS Shield Advanced"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Shield Advanced je plaćena napredna DDoS zaštita koja uključuje pristup AWS DDoS Response Team-u.",
+    "Reference": "https://aws.amazon.com/shield/"
+  },
+  {
+    "ID": 266,
+    "Domain": 2,
+    "QuestionText": "An organization wants central administration of AWS WAF protections across member accounts. Which service helps with that?",
+    "Options": [
+      "AWS Firewall Manager",
+      "AWS Audit Manager",
+      "AWS KMS",
+      "AWS Certificate Manager"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Firewall Manager centralno postavlja i upravlja zaštitnim pravilima kroz više AWS naloga i resursa.",
+    "Reference": "https://aws.amazon.com/firewall-manager/"
+  },
+  {
+    "ID": 267,
+    "Domain": 2,
+    "QuestionText": "Which TWO controls are most appropriate to prevent accidental public access to sensitive S3 objects? (Choose 2.)",
+    "Options": [
+      "Share the root password",
+      "Turn off audit logging and alerts",
+      "Enable S3 Block Public Access",
+      "Review bucket policies for least privilege",
+      "Grant anonymous read to all objects"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "D"
+    ],
+    "Explanation": "Block Public Access sprečava mnoge javne grantove, a usko definisane bucket politike ograničavaju pristup.",
+    "Reference": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html"
+  },
+  {
+    "ID": 268,
+    "Domain": 2,
+    "QuestionText": "A security team wants to find S3 buckets and IAM roles shared with principals outside its trust boundary. Which capability should it use?",
+    "Options": [
+      "Amazon EFS",
+      "IAM Access Analyzer",
+      "AWS Lambda",
+      "AWS Budgets"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "IAM Access Analyzer analizira politike resursa i prijavljuje vanjsko ili javno dijeljenje.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+  },
+  {
+    "ID": 269,
+    "Domain": 2,
+    "QuestionText": "A team wants to preview whether a new bucket policy would expose a resource to the public before deployment. Which tool can help?",
+    "Options": [
+      "Amazon Route 53",
+      "EC2 Auto Scaling",
+      "IAM Access Analyzer",
+      "AWS Pricing Calculator"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "IAM Access Analyzer može provjeriti uticaj politike na javni i cross-account pristup prije primjene.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html"
+  },
+  {
+    "ID": 270,
+    "Domain": 2,
+    "QuestionText": "An auditor asks whether a resource’s configuration changed and whether it complies with a defined rule. Which service answers this?",
+    "Options": [
+      "AWS Config",
+      "AWS CloudTrail only",
+      "AWS Shield",
+      "Amazon SNS"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS Config prati konfiguracione promjene resursa i procjenjuje usklađenost s pravilima.",
+    "Reference": "https://aws.amazon.com/config/"
+  },
+  {
+    "ID": 271,
+    "Domain": 2,
+    "QuestionText": "A security analyst needs to know which principal deleted an IAM role yesterday. Which service records the API action?",
+    "Options": [
+      "AWS CloudTrail",
+      "Amazon Macie",
+      "AWS WAF",
+      "AWS Config"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "CloudTrail evidentira API aktivnost i identitet pozivaoca za reviziju.",
+    "Reference": "https://aws.amazon.com/cloudtrail/"
+  },
+  {
+    "ID": 272,
+    "Domain": 2,
+    "QuestionText": "Which TWO statements correctly separate CloudTrail and CloudWatch? (Choose 2.)",
+    "Options": [
+      "Both are physical firewalls",
+      "CloudTrail records AWS API activity",
+      "CloudWatch creates IAM users",
+      "CloudWatch collects metrics and supports alarms",
+      "CloudTrail stores application source code"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "D"
+    ],
+    "Explanation": "CloudTrail daje reviziju API događaja, a CloudWatch metrike, logove i alarme.",
+    "Reference": "https://aws.amazon.com/cloudtrail/"
+  },
+  {
+    "ID": 273,
+    "Domain": 2,
+    "QuestionText": "A company wants AWS security controls to meet an industry regulation. Which statement about shared responsibility is correct?",
+    "Options": [
+      "AWS compliance reports support the customer, but the customer must configure its own workload appropriately",
+      "A customer never needs its own controls on managed services",
+      "Industry requirements apply only to physical data centers",
+      "AWS certifications automatically certify every customer application"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS dokazi o usklađenosti pokrivaju AWS kontrole; korisnik ostaje odgovoran za primjenjive kontrole svojih podataka i aplikacija.",
+    "Reference": "https://aws.amazon.com/compliance/shared-responsibility-model/"
+  },
+  {
+    "ID": 274,
+    "Domain": 2,
+    "QuestionText": "An organization is choosing a Region for regulated records. Which TWO considerations are relevant to data residency? (Choose 2.)",
+    "Options": [
+      "Any configured cross-Region replication",
+      "The order of EC2 instance types",
+      "The Region in which data is stored",
+      "The name of the IAM user",
+      "Only the user interface language"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "C"
+    ],
+    "Explanation": "Za lokaciju podataka važni su izabrani Region i eventualno kopiranje podataka u drugi Region.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain2.html"
+  },
+  {
+    "ID": 275,
+    "Domain": 2,
+    "QuestionText": "A developer wants AWS to rotate a database password automatically and let the application retrieve it securely. Which service is purpose-built for this?",
+    "Options": [
+      "Amazon CloudFront",
+      "AWS WAF",
+      "AWS Certificate Manager",
+      "AWS Secrets Manager"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Secrets Manager čuva i može automatski rotirati podržane tajne, uključujući kredencijale baze.",
+    "Reference": "https://aws.amazon.com/secrets-manager/"
+  },
+  {
+    "ID": 276,
+    "Domain": 2,
+    "QuestionText": "Which TWO items should an IAM access review examine to enforce least privilege? (Choose 2.)",
+    "Options": [
+      "The color of the AWS console theme",
+      "Permissions actually used by the role",
+      "The size of an unrelated S3 object",
+      "The number of Availability Zones in a Region",
+      "Resources and actions the policy allows"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "E"
+    ],
+    "Explanation": "Najmanje privilegije traže upoređivanje stvarno potrebnih radnji s opsegom dozvola u politici.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+  },
+  {
+    "ID": 277,
+    "Domain": 2,
+    "QuestionText": "A company uses AWS IAM Identity Center to assign workforce access to many accounts. Which benefit is primary?",
+    "Options": [
+      "EC2 price estimation",
+      "Centralized workforce access management",
+      "Automatic DDoS protection",
+      "Object storage"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "IAM Identity Center centralizuje identitete, prijavu i dodjelu pristupa AWS nalozima.",
+    "Reference": "https://aws.amazon.com/iam/identity-center/"
+  },
+  {
+    "ID": 278,
+    "Domain": 2,
+    "QuestionText": "A team creates separate AWS accounts for production and experimentation. Which security goal does this account separation help achieve?",
+    "Options": [
+      "Remove the need for IAM policies",
+      "Make all data public",
+      "Limit the blast radius and isolate environments",
+      "Guarantee zero production downtime"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Odvojeni nalozi stvaraju granice pristupa i pomažu izolaciji okruženja, iako i dalje traže pravilne kontrole.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain2.html"
+  },
+  {
+    "ID": 279,
+    "Domain": 2,
+    "QuestionText": "A managed service stores data for a customer. Who decides whether that data is public, confidential, or regulated?",
+    "Options": [
+      "The CDN edge location",
+      "AWS Marketplace seller",
+      "The customer",
+      "AWS data-center technician"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Korisnik klasifikuje svoje podatke i bira odgovarajuće kontrole čak i kada AWS upravlja osnovnim servisom.",
+    "Reference": "https://aws.amazon.com/compliance/shared-responsibility-model/"
+  },
+  {
+    "ID": 280,
+    "Domain": 2,
+    "QuestionText": "A company needs evidence of the current IAM users and their MFA and access-key status. Which IAM report provides this inventory?",
+    "Options": [
+      "S3 Inventory",
+      "CloudFront access log",
+      "AWS Pricing Calculator estimate",
+      "Credential report"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "IAM credential report popisuje IAM korisnike i stanje njihovih kredencijala, uključujući MFA i pristupne ključeve.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_getting-report.html"
+  },
+  {
+    "ID": 281,
+    "Domain": 2,
+    "QuestionText": "Which THREE controls protect different layers of a public web application? (Choose 3.)",
+    "Options": [
+      "AWS Artifact for application firewall rules",
+      "AWS WAF for HTTP request filtering",
+      "AWS Budgets for packet filtering",
+      "S3 Lifecycle for identity federation",
+      "AWS Shield for DDoS protection",
+      "Security groups for instance traffic"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "E",
+      "F"
+    ],
+    "Explanation": "Security groups kontrolišu mrežni saobraćaj instanci, WAF HTTP zahtjeve, a Shield DDoS napade.",
+    "Reference": "https://aws.amazon.com/waf/"
+  },
+  {
+    "ID": 282,
+    "Domain": 2,
+    "QuestionText": "A team wants to know whether a security control is preventive or detective. Which pairing is correct?",
+    "Options": [
+      "S3 Block Public Access is preventive; GuardDuty is detective",
+      "GuardDuty is preventive; S3 Block Public Access is detective",
+      "Both issue TLS certificates",
+      "Both only calculate costs"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Block Public Access sprječava određene javne dozvole, dok GuardDuty otkriva sumnjivu aktivnost i iznosi nalaze.",
+    "Reference": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html"
+  },
+  {
+    "ID": 283,
+    "Domain": 2,
+    "QuestionText": "A policy should permit an AWS action only when a request meets a specified context, such as an allowed source network. Which IAM policy element expresses that restriction?",
+    "Options": [
+      "Version",
+      "Condition",
+      "Sid",
+      "Effect"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Condition dio IAM politike provjerava kontekst zahtjeva, na primjer izvorni IP, uz ostale dozvole politike.",
+    "Reference": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html"
+  }
+]

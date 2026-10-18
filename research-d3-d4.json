@@ -1,0 +1,1437 @@
+[
+  {
+    "ID": 284,
+    "Domain": 3,
+    "QuestionText": "An operations team wants to run the same AWS resource-listing command from a terminal in an automated script. Which access method fits?",
+    "Options": [
+      "AWS Artifact",
+      "AWS Marketplace",
+      "AWS Command Line Interface (CLI)",
+      "AWS Management Console"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS CLI omogućava upravljanje AWS servisima komandama i zato odgovara ponovljivim skriptama.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 285,
+    "Domain": 3,
+    "QuestionText": "A mobile application written in Java needs to call AWS APIs using language-specific libraries. What should its developers use?",
+    "Options": [
+      "AWS CloudFormation only",
+      "AWS Pricing Calculator",
+      "AWS Support Center",
+      "AWS SDK for Java"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS SDK sadrži biblioteke za programski pristup AWS servisima iz podržanog jezika.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 286,
+    "Domain": 3,
+    "QuestionText": "A new administrator needs to inspect and create a few AWS resources through a web browser without writing code. Which interface is most direct?",
+    "Options": [
+      "AWS SDK",
+      "AWS Management Console",
+      "AWS Direct Connect",
+      "AWS CLI"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Management Console je web interfejs za ručno upravljanje AWS resursima.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 287,
+    "Domain": 3,
+    "QuestionText": "A company keeps some systems in its own data center and moves others to AWS. What deployment model does this describe?",
+    "Options": [
+      "Cloud-only",
+      "Hybrid cloud",
+      "Edge-only",
+      "Multi-tenant SaaS"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Hibridni model kombinuje lokalnu infrastrukturu sa resursima u AWS Cloudu.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 288,
+    "Domain": 3,
+    "QuestionText": "A web tier must keep serving users if one Availability Zone becomes unavailable. Which deployment choice best supports this goal?",
+    "Options": [
+      "Place all instances in one subnet in one AZ",
+      "Use one larger EC2 instance",
+      "Copy the AMI to another account only",
+      "Place instances in two or more AZs behind a load balancer"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AZ-ovi su odvojene lokacije; raspodjela instanci i saobraćaja kroz više AZ-ova povećava dostupnost.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 289,
+    "Domain": 3,
+    "QuestionText": "A company must keep customer data within a particular country where AWS has an eligible Region. What is the primary infrastructure choice?",
+    "Options": [
+      "Choose an instance family",
+      "Choose that AWS Region for the workload",
+      "Choose any edge location",
+      "Choose an Amazon S3 object prefix"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS Region je geografsko područje za smještaj resursa i podataka; izbor Regije podržava zahtjeve rezidentnosti.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 290,
+    "Domain": 3,
+    "QuestionText": "Which TWO statements distinguish AWS edge locations from Availability Zones? (Choose 2.)",
+    "Options": [
+      "Edge locations are identical to AWS Regions",
+      "Edge locations help deliver content nearer to viewers",
+      "Availability Zones are only billing constructs",
+      "Every edge location contains a full VPC",
+      "Availability Zones host regional resources such as EC2 instances"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "E"
+    ],
+    "Explanation": "CloudFront koristi edge lokacije za isporuku sadržaja; AZ-ovi su izolovane lokacije unutar Regije koje hostuju regionalne resurse.",
+    "Reference": "https://aws.amazon.com/about-aws/global-infrastructure/"
+  },
+  {
+    "ID": 291,
+    "Domain": 3,
+    "QuestionText": "A scientific batch job spends most of its time performing CPU-intensive calculations. Which EC2 instance family category is the best starting point?",
+    "Options": [
+      "Storage optimized",
+      "Memory optimized",
+      "Compute optimized",
+      "General purpose only"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Compute-optimized instancama je naglasak na CPU kapacitetu za računski intenzivne zadatke.",
+    "Reference": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html"
+  },
+  {
+    "ID": 292,
+    "Domain": 3,
+    "QuestionText": "An in-memory database needs a large amount of RAM relative to CPU. Which EC2 instance category is most appropriate?",
+    "Options": [
+      "Storage optimized",
+      "Memory optimized",
+      "Accelerated computing only",
+      "Compute optimized"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Memory-optimized instance pružaju visok odnos memorije prema procesoru za radne terete u memoriji.",
+    "Reference": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html"
+  },
+  {
+    "ID": 293,
+    "Domain": 3,
+    "QuestionText": "A data-processing application needs very high sequential read and write throughput on local disks. Which EC2 category should be considered?",
+    "Options": [
+      "Storage optimized",
+      "Burstable general purpose",
+      "GPU accelerated",
+      "Memory optimized"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Storage-optimized instance su namijenjene radnim teretima s visokim protokom i pristupom lokalnom skladištu.",
+    "Reference": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html"
+  },
+  {
+    "ID": 294,
+    "Domain": 3,
+    "QuestionText": "A machine-learning team needs GPUs to train a model on an EC2 instance. Which instance category is relevant?",
+    "Options": [
+      "Burstable general purpose",
+      "Compute optimized",
+      "Accelerated computing",
+      "Storage optimized"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Accelerated-computing instance mogu koristiti GPU i druge akceleratore za ML i slične zadatke.",
+    "Reference": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html"
+  },
+  {
+    "ID": 295,
+    "Domain": 3,
+    "QuestionText": "A team wants AWS-native orchestration for Docker containers, but it does not require Kubernetes APIs. Which service is the direct fit?",
+    "Options": [
+      "Amazon ECS",
+      "AWS Batch",
+      "Amazon EKS",
+      "Amazon S3"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Amazon ECS je AWS-ov upravljani servis za orkestraciju kontejnera; EKS je namijenjen Kubernetesu.",
+    "Reference": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html"
+  },
+  {
+    "ID": 296,
+    "Domain": 3,
+    "QuestionText": "Which TWO statements about AWS Fargate are correct? (Choose 2.)",
+    "Options": [
+      "It replaces IAM permissions",
+      "It runs containers without customers managing EC2 hosts",
+      "It can be used with Amazon ECS or Amazon EKS",
+      "It requires purchasing EC2 Reserved Instances first",
+      "It is an object-storage class"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "C"
+    ],
+    "Explanation": "Fargate je serverless kapacitet za kontejnerske zadatke u ECS-u ili EKS-u; hostovi nisu korisnikova briga.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 297,
+    "Domain": 3,
+    "QuestionText": "A workload needs temporary scratch data on storage physically attached to an EC2 host and can tolerate losing that data when the instance stops. Which storage type fits?",
+    "Options": [
+      "Amazon EFS",
+      "Amazon S3 Glacier Deep Archive",
+      "Amazon EBS volume",
+      "EC2 instance store"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Instance store daje privremeni lokalni blokovski prostor; podaci ne opstaju nakon zaustavljanja instance.",
+    "Reference": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html"
+  },
+  {
+    "ID": 298,
+    "Domain": 3,
+    "QuestionText": "A team wants point-in-time backups of an Amazon EBS volume that it can use to create new volumes. What should it create?",
+    "Options": [
+      "EBS snapshots",
+      "CloudFront distributions",
+      "Amazon SQS messages",
+      "RDS read replicas"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "EBS snapshot je kopija volumena u određenom trenutku iz koje se može napraviti novi volumen.",
+    "Reference": "https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html"
+  },
+  {
+    "ID": 299,
+    "Domain": 3,
+    "QuestionText": "A Linux application needs a shared file system that automatically grows and shrinks as files are added and removed. Which service fits?",
+    "Options": [
+      "Amazon EBS",
+      "Amazon EFS",
+      "EC2 instance store",
+      "Amazon S3 Glacier"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Amazon EFS je elastičan upravljani fajl sistem kojem može pristupiti više Linux instanci.",
+    "Reference": "https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html"
+  },
+  {
+    "ID": 300,
+    "Domain": 3,
+    "QuestionText": "A team needs archived objects that are accessed rarely but must be retrieved in milliseconds. Which S3 archival class fits?",
+    "Options": [
+      "S3 Glacier Instant Retrieval",
+      "S3 One Zone-IA",
+      "S3 Glacier Deep Archive",
+      "S3 Glacier Flexible Retrieval"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Glacier Instant Retrieval je arhivska klasa s pristupom u milisekundama; ostale Glacier klase imaju sporije opcije povrata.",
+    "Reference": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html"
+  },
+  {
+    "ID": 301,
+    "Domain": 3,
+    "QuestionText": "A company needs copies of S3 objects in a second AWS Region for compliance. Which S3 capability addresses this?",
+    "Options": [
+      "S3 Transfer Acceleration",
+      "Cross-Region Replication",
+      "S3 Select",
+      "S3 Object Lock"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "S3 Cross-Region Replication asinhrono kopira objekte između bucket-a u različitim Regijama.",
+    "Reference": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html"
+  },
+  {
+    "ID": 302,
+    "Domain": 3,
+    "QuestionText": "A relational database must fail over automatically to a standby in another Availability Zone when its primary fails. Which Amazon RDS option is designed for this?",
+    "Options": [
+      "Read Replica only",
+      "Manual snapshot only",
+      "ElastiCache",
+      "Multi-AZ deployment"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "RDS Multi-AZ održava sinhroni standby i omogućava automatski failover za visoku dostupnost.",
+    "Reference": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html"
+  },
+  {
+    "ID": 303,
+    "Domain": 3,
+    "QuestionText": "A read-heavy relational application needs to spread read queries across additional database instances. Which Amazon RDS feature is appropriate?",
+    "Options": [
+      "Multi-AZ standby alone",
+      "AWS Schema Conversion Tool",
+      "Read Replicas",
+      "Amazon EBS snapshots"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "RDS Read Replicas služe skaliranju čitanja; standby u Multi-AZ postavci primarno služi dostupnosti.",
+    "Reference": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html"
+  },
+  {
+    "ID": 304,
+    "Domain": 3,
+    "QuestionText": "A company has a MongoDB-compatible document application and wants a managed AWS database. Which service best matches?",
+    "Options": [
+      "Amazon Redshift",
+      "Amazon ElastiCache",
+      "Amazon Neptune",
+      "Amazon DocumentDB"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Amazon DocumentDB je upravljana baza kompatibilna s MongoDB API-jem za dokumentne podatke.",
+    "Reference": "https://docs.aws.amazon.com/documentdb/latest/developerguide/what-is.html"
+  },
+  {
+    "ID": 305,
+    "Domain": 3,
+    "QuestionText": "A fraud team needs to explore relationships among customers, devices, and transactions as a graph. Which managed database is designed for this?",
+    "Options": [
+      "Amazon ElastiCache",
+      "Amazon Neptune",
+      "Amazon Redshift",
+      "Amazon RDS"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Amazon Neptune je upravljana graf baza za povezane entitete i odnose.",
+    "Reference": "https://docs.aws.amazon.com/neptune/latest/userguide/intro.html"
+  },
+  {
+    "ID": 306,
+    "Domain": 3,
+    "QuestionText": "Before migrating a database to a different database engine, a team must convert its schema and stored code. Which AWS tool helps?",
+    "Options": [
+      "AWS Schema Conversion Tool",
+      "Amazon CloudWatch",
+      "AWS Direct Connect",
+      "AWS Backup"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS SCT pretvara postojeću šemu i bazni kod u format ciljnog engine-a; DMS prenosi podatke.",
+    "Reference": "https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Welcome.html"
+  },
+  {
+    "ID": 307,
+    "Domain": 3,
+    "QuestionText": "An application in a VPC needs private connectivity to an AWS service without using an internet gateway. Which offering supports this?",
+    "Options": [
+      "AWS PrivateLink",
+      "AWS Global Accelerator",
+      "Amazon Route 53 only",
+      "CloudFront"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "PrivateLink omogućava privatnu vezu prema podržanim servisima putem VPC endpointa.",
+    "Reference": "https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html"
+  },
+  {
+    "ID": 308,
+    "Domain": 3,
+    "QuestionText": "A company wants an encrypted tunnel over the internet between its on-premises network and an Amazon VPC. Which service fits?",
+    "Options": [
+      "Amazon CloudFront",
+      "AWS Direct Connect",
+      "AWS PrivateLink",
+      "AWS Site-to-Site VPN"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Site-to-Site VPN uspostavlja IPsec tunel između lokalne mreže i VPC-a preko interneta.",
+    "Reference": "https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html"
+  },
+  {
+    "ID": 309,
+    "Domain": 3,
+    "QuestionText": "Remote employees need a managed VPN connection from their laptops to resources in a VPC. What should the company use?",
+    "Options": [
+      "AWS Client VPN",
+      "AWS Site-to-Site VPN",
+      "AWS Transit Gateway only",
+      "Amazon Route 53"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS Client VPN je upravljani VPN servis za korisničke uređaje koji pristupaju AWS mrežama.",
+    "Reference": "https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html"
+  },
+  {
+    "ID": 310,
+    "Domain": 3,
+    "QuestionText": "A company needs a central network hub to connect many VPCs and its on-premises networks. Which service is designed for this?",
+    "Options": [
+      "AWS WAF",
+      "Amazon API Gateway",
+      "Amazon CloudFront",
+      "AWS Transit Gateway"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Transit Gateway djeluje kao mrežni hub za povezivanje VPC-ova i lokalnih mreža.",
+    "Reference": "https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html"
+  },
+  {
+    "ID": 311,
+    "Domain": 3,
+    "QuestionText": "A website routes /images requests to one target group and /api requests to another. Which load balancer supports path-based HTTP routing?",
+    "Options": [
+      "Network Load Balancer",
+      "AWS Site-to-Site VPN",
+      "Application Load Balancer",
+      "Gateway Load Balancer"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Application Load Balancer obrađuje HTTP/HTTPS i može usmjeravati zahtjeve prema URL putanji.",
+    "Reference": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html"
+  },
+  {
+    "ID": 312,
+    "Domain": 3,
+    "QuestionText": "An application needs to distribute TCP connections at very high performance and retain a static IP address. Which load balancer is the best match?",
+    "Options": [
+      "Network Load Balancer",
+      "Classic Load Balancer",
+      "Amazon Route 53 health check",
+      "Application Load Balancer"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Network Load Balancer radi na transportnom sloju, podržava TCP i statične IP adrese.",
+    "Reference": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html"
+  },
+  {
+    "ID": 313,
+    "Domain": 3,
+    "QuestionText": "Private EC2 instances need to download software updates from the internet while remaining unreachable from unsolicited inbound internet traffic. Which component can provide outbound access?",
+    "Options": [
+      "Internet gateway directly on the private subnet",
+      "AWS WAF",
+      "Amazon CloudFront",
+      "NAT gateway"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "NAT gateway omogućava instancama u privatnom subnetu odlazni pristup internetu bez direktnog dolaznog pristupa.",
+    "Reference": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html"
+  },
+  {
+    "ID": 314,
+    "Domain": 3,
+    "QuestionText": "A data analyst wants to run SQL directly against files stored in Amazon S3 without managing servers. Which service fits?",
+    "Options": [
+      "Amazon Athena",
+      "Amazon RDS",
+      "Amazon Neptune",
+      "Amazon ElastiCache"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Athena omogućava interaktivne SQL upite nad podacima u S3, bez upravljanja serverima.",
+    "Reference": "https://docs.aws.amazon.com/athena/latest/ug/what-is.html"
+  },
+  {
+    "ID": 315,
+    "Domain": 3,
+    "QuestionText": "A team needs a managed ETL service to discover, prepare, and integrate data for analytics. Which service should it choose?",
+    "Options": [
+      "AWS Glue",
+      "AWS X-Ray",
+      "Amazon Route 53",
+      "Amazon SNS"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS Glue je upravljani servis za integraciju podataka i ETL poslove.",
+    "Reference": "https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html"
+  },
+  {
+    "ID": 316,
+    "Domain": 3,
+    "QuestionText": "A business analyst needs interactive dashboards to visualize AWS and external data. Which AWS service is designed for this?",
+    "Options": [
+      "Amazon SQS",
+      "Amazon Kinesis",
+      "Amazon EBS",
+      "Amazon Quick Sight"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Amazon Quick Sight služi poslovnoj inteligenciji i izradi interaktivnih dashboarda.",
+    "Reference": "https://docs.aws.amazon.com/quicksight/latest/user/welcome.html"
+  },
+  {
+    "ID": 317,
+    "Domain": 3,
+    "QuestionText": "A team needs a managed platform to run Apache Spark and Hadoop big-data jobs. Which service fits?",
+    "Options": [
+      "Amazon Athena",
+      "AWS Lambda",
+      "Amazon EMR",
+      "Amazon CloudFront"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Amazon EMR upravlja klasterima i frameworkovima kao što su Spark i Hadoop.",
+    "Reference": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html"
+  },
+  {
+    "ID": 318,
+    "Domain": 3,
+    "QuestionText": "A team needs a managed service to index application logs for search and analysis. Which option fits?",
+    "Options": [
+      "AWS Backup",
+      "Amazon RDS",
+      "Amazon EFS",
+      "Amazon OpenSearch Service"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "OpenSearch Service pruža upravljano pretraživanje i analitiku nad indeksiranim podacima.",
+    "Reference": "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html"
+  },
+  {
+    "ID": 319,
+    "Domain": 3,
+    "QuestionText": "A data science team wants a managed environment to build, train, and deploy machine-learning models. Which service should it use?",
+    "Options": [
+      "Amazon SageMaker AI",
+      "Amazon Lex",
+      "Amazon Translate",
+      "Amazon Polly"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "SageMaker AI objedinjuje razvoj, treniranje i implementaciju ML modela.",
+    "Reference": "https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html"
+  },
+  {
+    "ID": 320,
+    "Domain": 3,
+    "QuestionText": "A retail app needs to identify objects and scenes in uploaded product photos. Which AI service is most suitable?",
+    "Options": [
+      "Amazon Rekognition",
+      "Amazon Textract",
+      "Amazon Transcribe",
+      "Amazon Comprehend"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Rekognition analizira slike i video te prepoznaje objekte i scene.",
+    "Reference": "https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html"
+  },
+  {
+    "ID": 321,
+    "Domain": 3,
+    "QuestionText": "A finance team wants to extract printed text and key-value fields from scanned invoices. Which service best fits?",
+    "Options": [
+      "Amazon Polly",
+      "Amazon Translate",
+      "Amazon Kinesis",
+      "Amazon Textract"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Textract izvlači tekst, obrasce i tabele iz skeniranih dokumenata.",
+    "Reference": "https://docs.aws.amazon.com/textract/latest/dg/what-is.html"
+  },
+  {
+    "ID": 322,
+    "Domain": 3,
+    "QuestionText": "A company wants to detect sentiment and key phrases in customer reviews. Which service should it use?",
+    "Options": [
+      "Amazon Rekognition",
+      "Amazon Lex",
+      "Amazon Comprehend",
+      "Amazon Polly"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Comprehend koristi NLP za analizu sentimenta i ključnih fraza u tekstu.",
+    "Reference": "https://docs.aws.amazon.com/comprehend/latest/dg/what-is.html"
+  },
+  {
+    "ID": 323,
+    "Domain": 3,
+    "QuestionText": "A call center wants searchable text transcripts of recorded customer calls. Which service is designed for this?",
+    "Options": [
+      "Amazon Textract",
+      "Amazon Translate",
+      "Amazon Transcribe",
+      "Amazon Polly"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Transcribe pretvara govor u tekst, uključujući snimljeni audio.",
+    "Reference": "https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html"
+  },
+  {
+    "ID": 324,
+    "Domain": 3,
+    "QuestionText": "A multilingual support portal needs automatic translation of written replies. Which service should it use?",
+    "Options": [
+      "Amazon Translate",
+      "Amazon Rekognition",
+      "Amazon Transcribe",
+      "Amazon Polly"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Amazon Translate automatski prevodi pisani tekst između jezika; Polly i Transcribe rade s govorom.",
+    "Reference": "https://docs.aws.amazon.com/translate/latest/dg/what-is.html"
+  },
+  {
+    "ID": 325,
+    "Domain": 3,
+    "QuestionText": "An accessibility feature must read text aloud in a natural-sounding voice. Which service provides this?",
+    "Options": [
+      "Amazon Kinesis",
+      "Amazon Textract",
+      "Amazon Comprehend",
+      "Amazon Polly"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Amazon Polly pretvara pisani tekst u govorni audio, uključujući glasove pogodne za čitanje sadržaja naglas.",
+    "Reference": "https://docs.aws.amazon.com/polly/latest/dg/what-is.html"
+  },
+  {
+    "ID": 326,
+    "Domain": 3,
+    "QuestionText": "A company needs a conversational chatbot that understands user intent and handles voice or text requests. Which service fits?",
+    "Options": [
+      "Amazon S3",
+      "Amazon Lex",
+      "Amazon Polly",
+      "Amazon OpenSearch Service"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Lex gradi razgovorne interfejse za tekst i govor uz prepoznavanje namjere korisnika.",
+    "Reference": "https://docs.aws.amazon.com/lexv2/latest/dg/what-is.html"
+  },
+  {
+    "ID": 327,
+    "Domain": 3,
+    "QuestionText": "An order event must notify several teams immediately and also remain available for a worker to process later. Which TWO services work together for this pattern? (Choose 2.)",
+    "Options": [
+      "Amazon RDS",
+      "Amazon EBS",
+      "Amazon SNS",
+      "Amazon SQS",
+      "AWS Direct Connect"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "D"
+    ],
+    "Explanation": "SNS šalje poruku više pretplatnika; pretplaćeni SQS red trajno je čuva dok je radnik ne preuzme.",
+    "Reference": "https://docs.aws.amazon.com/sns/latest/dg/sns-sqs-as-subscriber.html"
+  },
+  {
+    "ID": 328,
+    "Domain": 3,
+    "QuestionText": "An application must send high-volume transactional emails, such as receipts and password-reset messages. Which service is intended for this?",
+    "Options": [
+      "AWS Artifact",
+      "Amazon SQS",
+      "Amazon SES",
+      "Amazon Kinesis"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Amazon SES je upravljani servis za slanje i primanje e-pošte aplikacija.",
+    "Reference": "https://docs.aws.amazon.com/ses/latest/dg/Welcome.html"
+  },
+  {
+    "ID": 329,
+    "Domain": 3,
+    "QuestionText": "A business wants a cloud contact center for inbound customer calls without building its own telephony platform. Which service fits?",
+    "Options": [
+      "Amazon CloudFront",
+      "Amazon Lex only",
+      "Amazon Connect",
+      "Amazon WorkSpaces"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Amazon Connect je upravljani kontakt-centar za korisničku komunikaciju.",
+    "Reference": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+  },
+  {
+    "ID": 330,
+    "Domain": 3,
+    "QuestionText": "A developer needs to trace a request across several application components to identify where latency occurs. Which service helps?",
+    "Options": [
+      "AWS Organizations",
+      "AWS X-Ray",
+      "AWS Artifact",
+      "AWS Budgets"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS X-Ray prikuplja tragove zahtjeva radi analize ponašanja i latencije distribuirane aplikacije.",
+    "Reference": "https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html"
+  },
+  {
+    "ID": 331,
+    "Domain": 3,
+    "QuestionText": "Which TWO AWS developer tools cover source-code builds and orchestration of release stages? (Choose 2.)",
+    "Options": [
+      "AWS CodePipeline",
+      "Amazon Route 53",
+      "Amazon Macie",
+      "AWS Cost Explorer",
+      "AWS CodeBuild"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "E"
+    ],
+    "Explanation": "CodeBuild automatizuje gradnju i testiranje koda; CodePipeline orkestrira faze isporuke.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 332,
+    "Domain": 3,
+    "QuestionText": "A company wants to stream a desktop application to users through a browser without giving them a full persistent virtual desktop. Which service fits?",
+    "Options": [
+      "AWS Lambda",
+      "Amazon WorkSpaces",
+      "Amazon WorkSpaces Applications (formerly AppStream 2.0)",
+      "Amazon S3"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Amazon WorkSpaces Applications, ranije AppStream 2.0, streamuje aplikacije u browser; Amazon WorkSpaces pruža upravljane virtuelne desktopove.",
+    "Reference": "https://docs.aws.amazon.com/appstream2/latest/developerguide/what-is-appstream.html"
+  },
+  {
+    "ID": 333,
+    "Domain": 3,
+    "QuestionText": "Which TWO AWS services respectively let users access a managed virtual desktop and a secure browser environment? (Choose 2.)",
+    "Options": [
+      "Amazon S3",
+      "AWS Batch",
+      "Amazon WorkSpaces",
+      "Amazon WorkSpaces Secure Browser",
+      "Amazon Redshift"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "D"
+    ],
+    "Explanation": "WorkSpaces daje virtuelni desktop, dok WorkSpaces Secure Browser omogućava siguran pristup web sadržaju kroz upravljani browser.",
+    "Reference": "https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html"
+  },
+  {
+    "ID": 334,
+    "Domain": 4,
+    "QuestionText": "An Amazon Linux EC2 On-Demand instance runs for 3 minutes and 20 seconds. Which billing granularity generally applies?",
+    "Options": [
+      "No charge until one hour has passed",
+      "Always rounded to one full day",
+      "Always rounded to one full month",
+      "Per second, with a 60-second minimum"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Podržane EC2 Linux instance naplaćuju se po sekundi uz najmanje 60 sekundi korištenja.",
+    "Reference": "https://aws.amazon.com/ec2/pricing/on-demand/"
+  },
+  {
+    "ID": 335,
+    "Domain": 4,
+    "QuestionText": "Which TWO dimensions commonly affect the cost of Amazon S3 storage? (Choose 2.)",
+    "Options": [
+      "Number of IAM users in the account",
+      "AWS Support case count",
+      "Amount of data stored",
+      "Storage class selected",
+      "Name of the bucket"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "D"
+    ],
+    "Explanation": "S3 cijena zavisi od količine pohranjenih podataka i izabrane klase, uz moguće troškove zahtjeva i prenosa.",
+    "Reference": "https://aws.amazon.com/s3/pricing/"
+  },
+  {
+    "ID": 336,
+    "Domain": 4,
+    "QuestionText": "A team invokes a Lambda function twice as often and doubles its execution duration. Which pricing idea explains the likely increase?",
+    "Options": [
+      "Lambda charges can depend on request count and compute duration",
+      "The number of Availability Zones alone determines the charge",
+      "Only stored code size is billable",
+      "Lambda always has one fixed monthly fee"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Lambda naplata uključuje broj zahtjeva i trajanje izvršavanja, uz zavisnost od dodijeljene memorije.",
+    "Reference": "https://aws.amazon.com/lambda/pricing/"
+  },
+  {
+    "ID": 337,
+    "Domain": 4,
+    "QuestionText": "A finance team sees a low S3 storage rate but many object downloads. Which extra cost dimension should it examine?",
+    "Options": [
+      "Retrieval or request charges for the selected class",
+      "Support plan response time",
+      "Number of IAM roles",
+      "VPC CIDR size"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "S3 klase imaju različite cijene zahtjeva i povrata podataka, pa sama cijena po GB nije ukupni trošak.",
+    "Reference": "https://aws.amazon.com/s3/pricing/"
+  },
+  {
+    "ID": 338,
+    "Domain": 4,
+    "QuestionText": "Which TWO examples are typical variable AWS cost drivers? (Choose 2.)",
+    "Options": [
+      "Age of the AWS account alone",
+      "EC2 instance usage time",
+      "Outbound data transfer volume",
+      "Number of engineers who read public documentation",
+      "Number of AWS Regions announced globally"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "C"
+    ],
+    "Explanation": "AWS cijena često prati korištenje računalnog kapaciteta i prijenos podataka prema cjeniku usluge.",
+    "Reference": "https://aws.amazon.com/pricing/"
+  },
+  {
+    "ID": 339,
+    "Domain": 4,
+    "QuestionText": "A team wants AWS to recommend an appropriate Savings Plans commitment using its historical compute usage. Where can it find these recommendations?",
+    "Options": [
+      "AWS Cost Explorer",
+      "AWS Config",
+      "AWS Artifact",
+      "Amazon CloudFront"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Cost Explorer prikazuje preporuke za Savings Plans na osnovu ranijeg korištenja.",
+    "Reference": "https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html"
+  },
+  {
+    "ID": 340,
+    "Domain": 4,
+    "QuestionText": "A company can commit to a specific EC2 instance family in one Region and wants a larger discount than a more flexible Compute Savings Plan. Which option should it compare?",
+    "Options": [
+      "AWS Budgets",
+      "EC2 Instance Savings Plans",
+      "AWS Marketplace",
+      "On-Demand Instances"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "EC2 Instance Savings Plans vežu popust za porodicu instanci i Regiju, pa su manje fleksibilni od Compute Savings Plans.",
+    "Reference": "https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html"
+  },
+  {
+    "ID": 341,
+    "Domain": 4,
+    "QuestionText": "A company already owns a Savings Plan. How is the discount generally applied to matching eligible usage?",
+    "Options": [
+      "Only after opening a Support case",
+      "Only after exporting a PDF invoice",
+      "Automatically by AWS billing",
+      "Only after creating an S3 bucket"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS obračun automatski primjenjuje Savings Plans povoljniju stopu na odgovarajuće korištenje.",
+    "Reference": "https://docs.aws.amazon.com/savingsplans/latest/userguide/sp-applying.html"
+  },
+  {
+    "ID": 342,
+    "Domain": 4,
+    "QuestionText": "A company buys a Savings Plan but wants to avoid any initial payment. Which payment choice should it review?",
+    "Options": [
+      "No Upfront",
+      "Free Tier only",
+      "Spot only",
+      "All Upfront"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Savings Plans imaju No Upfront, Partial Upfront i All Upfront opcije plaćanja; No Upfront nema početnu uplatu.",
+    "Reference": "https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html"
+  },
+  {
+    "ID": 343,
+    "Domain": 4,
+    "QuestionText": "Which THREE payment options can be offered for Amazon EC2 Reserved Instances? (Choose 3.)",
+    "Options": [
+      "Partial Upfront",
+      "Spot auction deposit",
+      "No Upfront",
+      "Pay per request only",
+      "All Upfront"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "C",
+      "E"
+    ],
+    "Explanation": "EC2 Reserved Instances nude No Upfront, Partial Upfront i All Upfront modele plaćanja.",
+    "Reference": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html"
+  },
+  {
+    "ID": 344,
+    "Domain": 4,
+    "QuestionText": "A business buys a Reserved Instance but stops using matching capacity halfway through its term. Which statement is correct?",
+    "Options": [
+      "The RI commitment continues to incur its agreed charges",
+      "It becomes a Spot Instance",
+      "The RI turns into a Free Tier credit",
+      "AWS automatically cancels all charges"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Reserved Instance je obaveza na rok; neiskorištenost sama po sebi ne ukida trošak obaveze.",
+    "Reference": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html"
+  },
+  {
+    "ID": 345,
+    "Domain": 4,
+    "QuestionText": "An EBS-backed EC2 instance is stopped. Which charge may continue while its compute charge stops?",
+    "Options": [
+      "Instance CPU time",
+      "Attached Amazon EBS storage",
+      "Instance memory time",
+      "An automatic one-year Reserved Instance"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Zaustavljena EC2 instanca ne naplaćuje računalno korištenje, ali pohrana prikačenih EBS volumena i dalje se naplaćuje.",
+    "Reference": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html"
+  },
+  {
+    "ID": 346,
+    "Domain": 4,
+    "QuestionText": "A planner has built an AWS Pricing Calculator estimate and wants colleagues to review the same assumptions. What can the planner generate?",
+    "Options": [
+      "A guaranteed future invoice",
+      "A root-account password",
+      "A shareable estimate link",
+      "An automatic Reserved Instance purchase"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Pricing Calculator može generisati javni link za dijeljenje procjene s kolegama.",
+    "Reference": "https://docs.aws.amazon.com/pricing-calculator/latest/userguide/save-share-estimate.html"
+  },
+  {
+    "ID": 347,
+    "Domain": 4,
+    "QuestionText": "Why can a Pricing Calculator estimate differ from the final monthly invoice?",
+    "Options": [
+      "Actual usage and data transfer may differ from entered assumptions",
+      "Calculator guarantees a fixed invoice",
+      "Estimates include unlimited usage by default",
+      "Billing ignores the chosen Region"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Kalkulator daje procjenu na osnovu pretpostavki; stvarni račun prati realnu potrošnju i cijene.",
+    "Reference": "https://docs.aws.amazon.com/pricing-calculator/latest/userguide/what-is-pricing-calculator.html"
+  },
+  {
+    "ID": 348,
+    "Domain": 4,
+    "QuestionText": "A multi-account organization wants a chart showing which member account caused last month’s cost increase. Which Cost Explorer grouping should it use?",
+    "Options": [
+      "IAM password policy",
+      "EC2 security group",
+      "CloudFront cache key",
+      "Linked account"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Cost Explorer može grupisati troškove po povezanom članskom nalogu organizacije.",
+    "Reference": "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html"
+  },
+  {
+    "ID": 349,
+    "Domain": 4,
+    "QuestionText": "Which statement about AWS Cost Explorer forecasts is most accurate?",
+    "Options": [
+      "They are estimates based on observed spending patterns",
+      "They replace AWS Budgets alerts",
+      "They are guaranteed future invoices",
+      "They include costs of resources never configured"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Cost Explorer prognozira buduću potrošnju iz istorijskih podataka; procjena nije garantovani račun.",
+    "Reference": "https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html"
+  },
+  {
+    "ID": 350,
+    "Domain": 4,
+    "QuestionText": "After creating an AWS Cost and Usage Report, where does AWS deliver the report files?",
+    "Options": [
+      "An Amazon S3 bucket specified by the customer",
+      "An EC2 instance store volume",
+      "A CloudFront edge cache",
+      "Only the Support Center inbox"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS isporučuje Cost and Usage Report u S3 bucket koji korisnik navede.",
+    "Reference": "https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html"
+  },
+  {
+    "ID": 351,
+    "Domain": 4,
+    "QuestionText": "A team wants an alert when EC2 usage hours exceed a target, even if the dollar cost varies. Which budget type fits?",
+    "Options": [
+      "Reservation coverage budget only",
+      "Usage budget",
+      "Cost budget only",
+      "Savings Plans utilization budget only"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS Budgets podržava budžet zasnovan na količini korištenja, odvojeno od novčanog troška.",
+    "Reference": "https://docs.aws.amazon.com/cost-management/latest/userguide/custom-budgets.html"
+  },
+  {
+    "ID": 352,
+    "Domain": 4,
+    "QuestionText": "Which TWO measurements can AWS Budgets monitor for Savings Plans? (Choose 2.)",
+    "Options": [
+      "Coverage of eligible usage",
+      "EC2 CPU temperature",
+      "S3 object metadata length",
+      "Number of AWS documentation pages viewed",
+      "Utilization of the commitment"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "E"
+    ],
+    "Explanation": "AWS Budgets ima budžete za iskorištenost i pokrivenost Savings Plans obavezama.",
+    "Reference": "https://docs.aws.amazon.com/cost-management/latest/userguide/custom-budgets.html"
+  },
+  {
+    "ID": 353,
+    "Domain": 4,
+    "QuestionText": "A team wants to know whether its Reserved Instances sit unused. Which budget category should it inspect?",
+    "Options": [
+      "Free Tier trial",
+      "Reservation utilization",
+      "Data transfer quota",
+      "Application latency"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Reservation utilization prati koliko se kupljenih rezervacija stvarno koristi.",
+    "Reference": "https://docs.aws.amazon.com/cost-management/latest/userguide/custom-budgets.html"
+  },
+  {
+    "ID": 354,
+    "Domain": 4,
+    "QuestionText": "A cost anomaly monitor detects an unusual charge. Which TWO notification destinations does AWS Cost Anomaly Detection support? (Choose 2.)",
+    "Options": [
+      "Amazon SNS topic",
+      "Amazon EBS volume",
+      "VPC route table",
+      "Email",
+      "EC2 instance metadata"
+    ],
+    "CorrectAnswer": [
+      "A",
+      "D"
+    ],
+    "Explanation": "Cost Anomaly Detection može dostaviti upozorenje e-poštom ili preko SNS teme.",
+    "Reference": "https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html"
+  },
+  {
+    "ID": 355,
+    "Domain": 4,
+    "QuestionText": "Which statement describes a practical limit of AWS Cost Anomaly Detection?",
+    "Options": [
+      "It monitors CPU health instead of spending",
+      "It may detect anomalies after billing data becomes available rather than instantly",
+      "It replaces every service quota",
+      "It prevents all charges before they occur"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Detekcija se oslanja na obrađene podatke o troškovima, pa nije trenutna blokada potrošnje.",
+    "Reference": "https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html"
+  },
+  {
+    "ID": 356,
+    "Domain": 4,
+    "QuestionText": "A cost report must break down usage by a custom Project tag. What must be done after tagging supported resources?",
+    "Options": [
+      "Disable Cost Explorer",
+      "Activate that user-defined tag for cost allocation",
+      "Create an IAM root user for each project",
+      "Move every resource to a new Region"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Korisnički tagovi moraju biti aktivirani u Billing and Cost Management da bi se pojavili u izvještajima.",
+    "Reference": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html"
+  },
+  {
+    "ID": 357,
+    "Domain": 4,
+    "QuestionText": "A company wants to group several accounts and services under business labels such as Production and Research in cost reports. Which feature is intended for rule-based grouping?",
+    "Options": [
+      "Amazon Inspector",
+      "AWS X-Ray",
+      "AWS Shield",
+      "AWS Cost Categories"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Cost Categories grupišu troškove prema pravilima nad dimenzijama kao što su nalozi, servisi i tagovi.",
+    "Reference": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-cost-categories.html"
+  },
+  {
+    "ID": 358,
+    "Domain": 4,
+    "QuestionText": "Which account in an AWS Organization is responsible for paying the consolidated charges of member accounts?",
+    "Options": [
+      "Management account",
+      "AWS Marketplace seller",
+      "The newest member account",
+      "Every IAM user"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "U konsolidiranom obračunu management account plaća troškove članica organizacije.",
+    "Reference": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html"
+  },
+  {
+    "ID": 359,
+    "Domain": 4,
+    "QuestionText": "Which benefit can result when eligible usage from accounts in an AWS Organization is combined?",
+    "Options": [
+      "Support plans become free",
+      "All data-transfer charges disappear",
+      "Volume pricing tiers may be reached sooner",
+      "Each account receives unlimited free EC2"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Konsolidirani obračun agregira korištenje naloga pa može donijeti količinske popuste.",
+    "Reference": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html"
+  },
+  {
+    "ID": 360,
+    "Domain": 4,
+    "QuestionText": "A finance team wants to allocate every charge in a department’s AWS account, including resources that cannot be tagged individually. Which cost-allocation approach fits?",
+    "Options": [
+      "Open a support case for each invoice",
+      "Tag only EC2 instances",
+      "Use an SCP to label every charge",
+      "Activate an AWS Organizations account tag for cost allocation"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Aktivirani tag na AWS nalogu može dodijeliti troškove cijelog naloga poslovnoj jedinici, uključujući netagabilne stavke.",
+    "Reference": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/account-tags-cost-allocation.html"
+  },
+  {
+    "ID": 361,
+    "Domain": 4,
+    "QuestionText": "Can service control policies be used when an AWS Organization has only consolidated billing features enabled?",
+    "Options": [
+      "Yes; they are available in billing-only mode",
+      "Only with a Free plan",
+      "No; all features must be enabled",
+      "Only if there is one member account"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS dokumentacija navodi da SCP zahtijeva Organizations all-features način rada.",
+    "Reference": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html"
+  },
+  {
+    "ID": 362,
+    "Domain": 4,
+    "QuestionText": "A new customer on the AWS Free account plan joins an AWS Organization. What happens to the account plan?",
+    "Options": [
+      "It automatically upgrades to the Paid account plan",
+      "It stays Free indefinitely",
+      "It loses access to the Billing console",
+      "It automatically becomes Enterprise Support"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS navodi da ulazak u Organizations automatski prebacuje Free nalog na Paid plan.",
+    "Reference": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-plans.html"
+  },
+  {
+    "ID": 363,
+    "Domain": 4,
+    "QuestionText": "A new customer on the AWS Free account plan wants to buy an EC2 Reserved Instance. What must it do first?",
+    "Options": [
+      "Upgrade to the Paid account plan",
+      "Disable consolidated billing",
+      "Only create a budget",
+      "Open an Enterprise Support case"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Kupovina Reserved Instances nije dostupna na Free planu; potrebno je preći na Paid plan.",
+    "Reference": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-plans.html"
+  },
+  {
+    "ID": 364,
+    "Domain": 4,
+    "QuestionText": "An account needs a higher AWS service quota but has only Basic Support. Which statement is correct?",
+    "Options": [
+      "The account must buy Dedicated Hosts first",
+      "A designated TAM is required for every quota increase",
+      "Basic Support includes assistance with service quota increase requests",
+      "Quotas can never be increased"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "AWS navodi pomoć za povećanje kvota servisa među mogućnostima Basic Support plana.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html"
+  },
+  {
+    "ID": 365,
+    "Domain": 4,
+    "QuestionText": "A production team needs AWS assistance with common third-party software components running on EC2. Which current support plan first includes third-party software support?",
+    "Options": [
+      "Free account plan",
+      "AWS Business Support+",
+      "AWS Enterprise Support",
+      "Basic"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Business Support+ uključuje podršku za popularne komponente softvera trećih strana na AWS-u.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html"
+  },
+  {
+    "ID": 366,
+    "Domain": 4,
+    "QuestionText": "A company wants strategic business reviews with AWS experts as part of its support relationship. Which current support plan includes this benefit?",
+    "Options": [
+      "AWS Enterprise Support",
+      "Free account plan",
+      "AWS Business Support+",
+      "Basic"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS Enterprise Support uključuje strateške poslovne preglede s AWS stručnjacima.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html"
+  },
+  {
+    "ID": 367,
+    "Domain": 4,
+    "QuestionText": "Which current AWS Support offering includes a designated Domain Specialist Engineer in addition to a TAM for specific workloads?",
+    "Options": [
+      "Basic",
+      "AWS Enterprise Support",
+      "AWS Business Support+",
+      "AWS Unified Operations"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Unified Operations uključuje TAM-a i Domain Specialist Engineer-a za konkretne aplikacije i potrebe.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html"
+  },
+  {
+    "ID": 369,
+    "Domain": 4,
+    "QuestionText": "Which TWO capabilities are included with AWS Business Support+? (Choose 2.)",
+    "Options": [
+      "Free unlimited EC2 instances",
+      "AWS Support API access",
+      "24/7 access to Cloud Support Engineers",
+      "A designated TAM for every account",
+      "Automatic payment of all AWS invoices"
+    ],
+    "CorrectAnswer": [
+      "B",
+      "C"
+    ],
+    "Explanation": "Business Support+ uključuje neprekidan kontakt s inženjerima i Support API; TAM dolazi uz Enterprise.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html"
+  },
+  {
+    "ID": 370,
+    "Domain": 4,
+    "QuestionText": "A business-critical production system is down. Which current plan first lists human engagement in under 30 minutes for this severity?",
+    "Options": [
+      "Free account plan",
+      "Basic",
+      "No support plan",
+      "AWS Business Support+"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Business Support+ navodi angažman čovjeka za business-critical system down za manje od 30 minuta.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html"
+  },
+  {
+    "ID": 371,
+    "Domain": 4,
+    "QuestionText": "A company wants AWS Security Incident Response included with its support plan at no additional service charge. Which is the minimum current plan that provides it?",
+    "Options": [
+      "AWS Basic Support",
+      "AWS Enterprise Support",
+      "AWS Business Support+",
+      "AWS Unified Operations"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS Enterprise Support uključuje AWS Security Incident Response bez dodatne naknade za taj servis.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/aws-support-plans.html"
+  },
+  {
+    "ID": 372,
+    "Domain": 4,
+    "QuestionText": "A team wants a recommendation about idle or underused AWS resources that might waste money. Which AWS tool provides such checks?",
+    "Options": [
+      "AWS X-Ray",
+      "AWS Artifact",
+      "Amazon Textract",
+      "AWS Trusted Advisor"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "Trusted Advisor uključuje provjere optimizacije troškova, poput resursa koji se nedovoljno koriste.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/trusted-advisor.html"
+  },
+  {
+    "ID": 373,
+    "Domain": 4,
+    "QuestionText": "A support engineer wants to programmatically retrieve AWS events affecting the account’s own resources. Which interface is relevant?",
+    "Options": [
+      "AWS Marketplace Catalog API",
+      "AWS Price List API",
+      "Amazon S3 Select",
+      "AWS Health API"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS Health API izlaže događaje vezane za konkretan nalog i njegove resurse.",
+    "Reference": "https://docs.aws.amazon.com/health/latest/ug/what-is-aws-health.html"
+  },
+  {
+    "ID": 374,
+    "Domain": 4,
+    "QuestionText": "An engineer wants to ask an AWS technical question in a public expert community without opening a paid support case. Which resource fits?",
+    "Options": [
+      "AWS Cost and Usage Report",
+      "AWS Direct Connect",
+      "AWS License Manager",
+      "AWS re:Post"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS re:Post je zajednica za tehnička pitanja i odgovore o AWS-u.",
+    "Reference": "https://aws.amazon.com/about-aws/whats-new/2021/12/aws-repost-community-question-answer-service/"
+  },
+  {
+    "ID": 375,
+    "Domain": 4,
+    "QuestionText": "A migration team seeks official AWS implementation patterns and step-by-step migration guidance. Which resource is most relevant?",
+    "Options": [
+      "AWS Marketplace billing only",
+      "Amazon SQS",
+      "AWS Health Dashboard",
+      "AWS Prescriptive Guidance"
+    ],
+    "CorrectAnswer": "D",
+    "Explanation": "AWS Prescriptive Guidance objavljuje obrasce i smjernice za migraciju i modernizaciju.",
+    "Reference": "https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/"
+  },
+  {
+    "ID": 376,
+    "Domain": 4,
+    "QuestionText": "A company wants official service API references and setup instructions. Where should it look first?",
+    "Options": [
+      "AWS Budgets email",
+      "AWS Documentation",
+      "A random exam-dump forum",
+      "An EC2 instance store volume"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "AWS Documentation je zvanični izvor korisničkih i API vodiča za AWS servise.",
+    "Reference": "https://docs.aws.amazon.com/"
+  },
+  {
+    "ID": 377,
+    "Domain": 4,
+    "QuestionText": "A customer seeks an AWS-recognized system integrator to help implement its migration. Which program helps find such partners?",
+    "Options": [
+      "AWS Partner Network",
+      "Amazon S3 Storage Lens",
+      "Amazon CloudWatch Logs",
+      "AWS Budgets"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS Partner Network povezuje klijente s kvalifikovanim partnerima, uključujući sistemske integratore.",
+    "Reference": "https://aws.amazon.com/partners/"
+  },
+  {
+    "ID": 378,
+    "Domain": 4,
+    "QuestionText": "A buyer must inspect active and expired third-party software agreements already purchased through AWS Marketplace. Where should it go?",
+    "Options": [
+      "AWS Trusted Advisor security checks",
+      "Amazon Route 53 hosted zones",
+      "AWS Marketplace Manage subscriptions",
+      "AWS Health event log"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Marketplace Manage subscriptions prikazuje aktivne i neaktivne pretplate te detalje njihovih ugovora.",
+    "Reference": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-managing-subscriptions.html"
+  },
+  {
+    "ID": 379,
+    "Domain": 4,
+    "QuestionText": "An organization needs hands-on consulting from AWS experts for a major cloud transformation project. Which AWS offering is appropriate?",
+    "Options": [
+      "AWS Professional Services",
+      "Basic Support only",
+      "Amazon SNS",
+      "AWS Cost Anomaly Detection"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "AWS Professional Services pruža stručni angažman za planiranje i realizaciju cloud projekata.",
+    "Reference": "https://aws.amazon.com/professional-services/"
+  },
+  {
+    "ID": 380,
+    "Domain": 4,
+    "QuestionText": "A developer wants to find official AWS technical articles that answer common customer support questions. Which resource category fits?",
+    "Options": [
+      "AWS Spot pricing dashboard",
+      "AWS Knowledge Center on re:Post",
+      "Amazon EBS snapshot list",
+      "AWS Cost Categories"
+    ],
+    "CorrectAnswer": "B",
+    "Explanation": "Knowledge Center na re:Postu sadrži službene AWS članke o čestim tehničkim pitanjima.",
+    "Reference": "https://aws.amazon.com/about-aws/whats-new/2023/03/aws-re-post-includes-knowledge-center-articles/"
+  },
+  {
+    "ID": 381,
+    "Domain": 4,
+    "QuestionText": "A user wants to open an AWS Support case and later review the case correspondence. Which AWS interface provides this?",
+    "Options": [
+      "AWS Support Center",
+      "Amazon Athena",
+      "AWS Pricing Calculator",
+      "AWS Artifact"
+    ],
+    "CorrectAnswer": "A",
+    "Explanation": "Support Center omogućava otvaranje slučaja podrške i pregled detalja i komunikacije.",
+    "Reference": "https://docs.aws.amazon.com/awssupport/latest/user/create-support-case-from-interaction.html"
+  },
+  {
+    "ID": 382,
+    "Domain": 4,
+    "QuestionText": "A team needs a prebuilt cost dashboard combining budgets, spending trends, and reservation coverage. Which AWS area provides this?",
+    "Options": [
+      "Amazon Textract",
+      "AWS Artifact",
+      "AWS Billing and Cost Management Dashboards",
+      "AWS WAF"
+    ],
+    "CorrectAnswer": "C",
+    "Explanation": "Billing and Cost Management Dashboards objedinjuju Cost Explorer, Budgets i mjere pokrivenosti obaveza.",
+    "Reference": "https://docs.aws.amazon.com/cost-management/latest/userguide/dashboards.html"
+  },
+  {
+    "ID": 383,
+    "Domain": 4,
+    "QuestionText": "A company requires separate AWS accounts per department yet wants centrally governed billing. Which TWO AWS Organizations concepts support this? (Choose 2.)",
+    "Options": [
+      "A single IAM user used across all accounts",
+      "One shared root password for everyone",
+      "Member accounts",
+      "Management account",
+      "One EC2 instance for every department"
+    ],
+    "CorrectAnswer": [
+      "C",
+      "D"
+    ],
+    "Explanation": "Management account upravlja organizacijom i plaća konsolidirani račun, a članice ostaju odvojeni AWS nalozi.",
+    "Reference": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html"
+  }
+]

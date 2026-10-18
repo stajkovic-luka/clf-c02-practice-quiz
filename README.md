@@ -3,9 +3,11 @@
 Lagana, frontend-only web aplikacija za pripremu **AWS Certified Cloud Practitioner (CLF-C02)** ispita.
 Bez backend-a, bez baze — sva pitanja žive u jednom `questions.json` fajlu koji možeš slobodno dopunjavati.
 
+**Produkcija:** [aws-clf-c02-quiz-two.vercel.app](https://aws-clf-c02-quiz-two.vercel.app)
+
 - **Pitanja na engleskom** (kao na pravom ispitu), **objašnjenja na srpskom**, uz link do zvanične AWS dokumentacije kod svakog pitanja.
 - Kompletan kviz (sva pitanja, izmešano) ili vežbanje po jednoj od 4 CLF-C02 oblasti.
-- Feedback i detaljno objašnjenje odmah nakon svakog odgovora.
+- Napredak, tajmer po pitanju i **Mark for review** tokom kviza; tačni odgovori i objašnjenja prikazuju se nakon predaje.
 - Završni prikaz: ukupan procenat, statistika po oblastima i pregled pogrešnih odgovora.
 - **Lebdeća beleška** (dugme 📝 dole-desno): unos tokom vežbanja, prevlačenje po ekranu i
   export u `.txt` na tvoj računar. Sadržaj se **ne čuva nigde u storage-u** — postoji samo u
@@ -71,7 +73,7 @@ Otvori `src/data/questions.json` i dodaj objekat u niz. Šema:
 ```
 
 - `Domain`: 1 = Cloud Concepts, 2 = Security and Compliance, 3 = Cloud Technology and Services, 4 = Billing, Pricing, and Support.
-- `CorrectAnswer`: slovo opcije (`"A"`–`"D"`).
+- `CorrectAnswer`: slovo opcije (`"A"`–`"D"`) ili niz slova za pitanja sa više tačnih odgovora (`["A", "C"]`).
 - `Reference` je opciono — prikazuje se kao link na AWS dokumentaciju.
 - Aplikacija meša redosled pitanja **i** opcija pri svakom pokretanju, pa redosled u fajlu ne igra ulogu.
 - Nevalidni uneti (npr. izostavljeno objašnjenje) se preskaču uz upozorenje u konzoli — aplikacija ne pada.
@@ -97,5 +99,6 @@ Otvori `src/data/questions.json` i dodaj objekat u niz. Šema:
 ## Napomene o tačnosti sadržaja (oktobar 2026)
 
 - Težine domena (24% / 30% / 34% / 12%) i format ispita (65 pitanja, 90 min, 100 USD) prema zvaničnoj stranici ispita.
-- Pitanja o **AWS Support planovima** i **Free Tier**-u odražavaju aktuelno stanje: tokom 2025. AWS je ukinuo klasične Developer/Business planove (novi lineup: Basic / Business Support+ / Enterprise Support / Unified Operations) i uveo kreditni Free Tier model za nove naloge ($100 odmah, do $200 kroz 6 meseci). Detalji su u objašnjenjima pitanja 25 i 26.
+- Pitanja o **AWS Support planovima** i **Free Tier**-u odražavaju aktuelno stanje: trenutni planovi su Basic / Business Support+ / Enterprise Support / Unified Operations; postojeći Developer i Business planovi imaju najavljen kraj podrške 1. januara 2027. Novi Free Tier model koristi kredite za nove naloge. Detalji su u objašnjenjima pitanja 25 i 26.
+- Pitanja o Snowball Edge za nove korisnike i o datumu gašenja Developer Support plana uklonjena su iz aktivne baze. Razlozi i izvori su u [reviziji sadržaja](RESEARCH-HANDOFF.md).
 - Svako pitanje nosi link do zvanične AWS stranice/dokumentacije — proveri pre ispita ako je prošlo više od par meseci.
