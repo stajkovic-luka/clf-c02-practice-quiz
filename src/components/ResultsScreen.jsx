@@ -75,6 +75,7 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
                       {meta.code}
                     </span>
                     {meta.name}
+                    <span className="ml-2 font-mono text-xs text-neutral-500">{meta.weight} ispita</span>
                   </span>
                   <span className="font-mono text-xs text-neutral-500">
                     {d.correct}/{d.total} ({dpct}%)
