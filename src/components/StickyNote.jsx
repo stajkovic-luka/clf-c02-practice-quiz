@@ -27,6 +27,16 @@ export default function StickyNote({ open, onOpen, onClose, text, onChange }) {
   // Čišćenje tajmera pri demontiranju komponente.
   useEffect(() => () => clearTimeout(flashTimer.current), []);
 
+  useEffect(() => {
+    const keepVisible = () => setPos((current) => ({
+      x: Math.min(current.x, Math.max(0, window.innerWidth - Math.min(NOTE_WIDTH, window.innerWidth - 32))),
+      y: Math.min(current.y, Math.max(0, window.innerHeight - Math.min(340, window.innerHeight - 16))),
+    }));
+    window.addEventListener('resize', keepVisible);
+    keepVisible();
+    return () => window.removeEventListener('resize', keepVisible);
+  }, []);
+
   /** Početak prevlačenja — samo iz header-a, i ne sa dugmadi u header-u. */
   function startDrag(e) {
     if (e.target.closest('button')) return;
@@ -41,8 +51,8 @@ export default function StickyNote({ open, onOpen, onClose, text, onChange }) {
     if (!dragging) return undefined;
 
     const move = (e) => {
-      const maxX = window.innerWidth - 96; // bar deo panela ostaje vidljiv
-      const maxY = window.innerHeight - 48; // bar header ostaje vidljiv
+      const maxX = Math.max(0, window.innerWidth - Math.min(NOTE_WIDTH, window.innerWidth - 32));
+      const maxY = Math.max(0, window.innerHeight - Math.min(340, window.innerHeight - 16));
       setPos({
         x: Math.min(Math.max(0, e.clientX - dragOffset.current.x), maxX),
         y: Math.min(Math.max(0, e.clientY - dragOffset.current.y), maxY),
@@ -98,7 +108,7 @@ export default function StickyNote({ open, onOpen, onClose, text, onChange }) {
           role="complementary"
           aria-label="Beleške"
           style={{ left: pos.x, top: pos.y, width: `min(${NOTE_WIDTH}px, calc(100vw - 2rem))` }}
-          className="fixed z-50 flex flex-col overflow-hidden rounded-xl border border-amber-300 bg-amber-100 text-neutral-900 shadow-2xl shadow-black/50"
+          className="fixed z-50 flex max-h-[calc(100dvh-1rem)] flex-col overflow-hidden rounded-xl border border-amber-300 bg-amber-100 text-neutral-900 shadow-2xl shadow-black/50"
         >
           {/* Header — ručka za prevlačenje */}
           <div
@@ -133,11 +143,12 @@ export default function StickyNote({ open, onOpen, onClose, text, onChange }) {
 
           {/* Unos — kontroliše App, tako da zatvaranje/otvaranje ne briše tekst */}
           <textarea
+            aria-label="Tekst beleške"
             value={text}
             onChange={(e) => onChange(e.target.value)}
             placeholder="Zapiši ovde šta želiš da zapamtiš tokom vežbanja…"
             spellCheck={false}
-            className="h-48 resize-y bg-transparent px-3 py-2 font-mono text-[13px] leading-relaxed text-neutral-900 outline-none placeholder:text-neutral-500"
+            className="min-h-24 h-48 resize-y bg-transparent px-3 py-2 font-mono text-[13px] leading-relaxed text-neutral-900 outline-none focus-visible:ring-2 focus-visible:ring-amber-600 placeholder:text-neutral-500"
           />
 
           {/* Podsetnik na namerno ograničenje */}

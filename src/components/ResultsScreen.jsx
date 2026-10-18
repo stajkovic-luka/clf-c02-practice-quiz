@@ -2,7 +2,7 @@ import { DOMAINS, DOMAIN_IDS } from '../domains';
 
 /** Poruka prema ostvarenom procentu. */
 function scoreMessage(pct) {
-  if (pct >= 90) return 'Vrhunski rezultat — na ovom tempu si blizu sigurnog polaganja. 🏆';
+  if (pct >= 90) return 'Odličan rezultat na ovoj vežbi. Pregledaj preostale greške.';
   if (pct >= 75) return 'Odličan rezultat! Prođi kroz greške ispod i ponovi kviz sutra.';
   if (pct >= 60) return 'Solidno — ali za sigurno polaganje ciljaj stabilno preko 75% kod kuće.';
   return 'Još treba rada — pročitaj objašnjenja, pa kreni od oblasti sa najnižim skorom.';
@@ -16,7 +16,7 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
   const total = results.length;
   const correct = results.filter((r) => r.wasCorrect).length;
   const pct = Math.round((correct / total) * 100);
-  const wrong = results.filter((r) => !r.wasCorrect);
+  const review = results.filter((r) => !r.wasCorrect || r.marked);
 
   // Statistika po oblastima — samo oblasti koje su bile u ovom kvizu.
   const byDomain = DOMAIN_IDS.map((id) => {
@@ -53,8 +53,8 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
         </div>
         <p className="mt-4 text-sm leading-relaxed text-neutral-300">{scoreMessage(pct)}</p>
         <p className="mt-2 text-xs leading-relaxed text-neutral-500">
-          Za referencu: pravi ispit skalira rezultat na 100–1000 poena i prolazna granica je 700 —
-          procenat ovde posluži samo kao orijentacija.
+          Ovo je procenat tačnih odgovora na vežbi, ne predviđanje zvaničnog rezultata. AWS ispit
+          koristi skalirani rezultat od 100–1000 poena; granica prolaza je 700.
         </p>
       </section>
 
@@ -90,18 +90,18 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
       )}
 
       {/* --- Pregled grešaka --- */}
-      <section aria-label="Pregled pogrešnih odgovora" className="mt-8">
+      <section aria-label="Pregled odgovora" className="mt-8">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-500">
-          Pogledaj šta je bilo netačno
+          Netačna i označena pitanja
         </h2>
 
-        {wrong.length === 0 ? (
+        {review.length === 0 ? (
           <p className="mt-3 rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-4 text-sm text-emerald-300">
             Svi odgovori su tačni — svaka čast! 🏆
           </p>
         ) : (
           <div className="mt-3 space-y-2">
-            {wrong.map((r) => (
+            {review.map((r) => (
               <details
                 key={r.id}
                 className="group rounded-xl border border-neutral-800 bg-neutral-900/40 open:border-red-500/30 open:bg-red-500/5"
@@ -109,10 +109,10 @@ export default function ResultsScreen({ results, mode, onRestart, onHome }) {
                 <summary className="cursor-pointer list-none p-4 text-sm text-neutral-300 transition-colors hover:text-neutral-100">
                   <span className="mr-2 font-mono text-xs text-neutral-500 group-open:hidden">▸</span>
                   <span className="mr-2 hidden font-mono text-xs text-neutral-500 group-open:inline">▾</span>
-                  {r.questionText}
+                  {r.marked ? '★ ' : ''}{r.questionText}
                 </summary>
                 <div className="border-t border-neutral-800/60 p-4 text-sm leading-relaxed">
-                  <p className="text-red-400">
+                  <p className={r.wasCorrect ? 'text-emerald-400' : 'text-red-400'}>
                     <span className="font-semibold">Tvoj odgovor:</span> {r.userAnswer}
                   </p>
                   <p className="mt-1.5 text-emerald-400">

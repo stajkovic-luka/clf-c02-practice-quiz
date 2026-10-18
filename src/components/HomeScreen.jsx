@@ -27,7 +27,7 @@ export default function HomeScreen({ questions, onStart }) {
         <span aria-hidden="true">·</span>
         <span>4 oblasti</span>
         <span aria-hidden="true">·</span>
-        <span>pravi ispit: 65 pitanja / 90 min / 100 USD</span>
+        <span>zvanični ispit: 65 pitanja / 90 min</span>
       </div>
 
       {/* --- Glavni CTA: kompletan kviz --- */}
@@ -40,7 +40,7 @@ export default function HomeScreen({ questions, onStart }) {
             <h2 className="text-xl font-semibold text-neutral-50">Kompletan kviz</h2>
             <p className="mt-1 max-w-md text-sm text-neutral-400">
               Svih {total} pitanja iz sve četiri oblasti, nasumičan redosled pitanja i opcija —
-              simulacija punog ispita.
+              vežba iz cele baze.
             </p>
           </div>
           <button
